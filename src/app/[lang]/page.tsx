@@ -1,3 +1,4 @@
+
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import HeroSection from '@/components/sections/hero';
@@ -6,6 +7,7 @@ import SkillsSection from '@/components/sections/skills';
 import ContactSection from '@/components/sections/contact';
 import { getDictionary } from '@/lib/get-dictionary';
 import { Locale } from '../../../i18n-config';
+import { FadeIn } from '@/components/motion/fade-in';
 
 export default async function Home({
   params: { lang },
@@ -18,9 +20,15 @@ export default async function Home({
       <Header lang={lang} dictionary={dictionary.header} />
       <main className="flex-grow">
         <HeroSection dictionary={dictionary.hero} />
-        <AboutSection dictionary={dictionary.about} />
-        <SkillsSection dictionary={dictionary.skills} />
-        <ContactSection dictionary={dictionary.contact} />
+        <FadeIn>
+          <AboutSection dictionary={dictionary.about} />
+        </FadeIn>
+        <FadeIn>
+          <SkillsSection dictionary={dictionary.skills} />
+        </FadeIn>
+        <FadeIn>
+          <ContactSection dictionary={dictionary.contact} />
+        </FadeIn>
       </main>
       <Footer dictionary={dictionary.footer} />
     </div>
