@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Cpu } from 'lucide-react';
 import LanguageSwitcher from './language-switcher';
 import { Locale } from '../../../i18n-config';
+import { ThemeSwitcher } from './theme-switcher';
 
 const navLinks = [
   { href: '#about', key: 'about' },
@@ -30,7 +31,10 @@ export default function Header({ lang, dictionary }: { lang: Locale, dictionary:
               </li>
             ))}
           </ul>
-          <LanguageSwitcher lang={lang} />
+          <div className="flex items-center gap-2">
+            <LanguageSwitcher lang={lang} />
+            <ThemeSwitcher />
+          </div>
         </nav>
       </div>
     </header>
