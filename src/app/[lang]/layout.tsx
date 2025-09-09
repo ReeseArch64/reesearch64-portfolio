@@ -1,5 +1,3 @@
-import type { Metadata } from 'next';
-import '../globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import { i18n } from '../../../i18n-config';
 import { Inter, Space_Grotesk } from 'next/font/google';
@@ -20,12 +18,7 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-export const metadata: Metadata = {
-  title: 'ReeseArch64',
-  description: 'ReeseArch64 - AI-powered solutions and automations.',
-};
-
-export default function RootLayout({
+export default function Layout({
   children,
   params,
 }: Readonly<{
