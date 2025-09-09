@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
   title: 'ReeseArch64',
-  description: "ReeseArch64 - Soluções e automações com tecnologia de IA.",
+  description: "ReeseArch64 - AI-powered solutions and automations.",
 };
 
 export default function RootLayout({

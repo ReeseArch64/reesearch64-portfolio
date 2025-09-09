@@ -8,8 +8,8 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="w-full py-24 sm:py-32 bg-secondary">
       <div className="container mx-auto max-w-7xl px-4 text-center">
-        <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">O que eu faço</h2>
-        <p className="mt-4 text-lg text-muted-foreground">Minhas especialidades para transformar suas ideias em realidade.</p>
+        <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">What I Do</h2>
+        <p className="mt-4 text-lg text-muted-foreground">My specialties to bring your ideas to life.</p>
         <div className="mt-10 flex justify-center">
           <Tabs defaultValue={categories[0]} className="w-full max-w-4xl">
             <TabsList className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-4 h-auto flex-wrap">
