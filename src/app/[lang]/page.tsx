@@ -9,11 +9,12 @@ import { getDictionary } from '@/lib/get-dictionary';
 import { Locale } from '../../../i18n-config';
 import { FadeIn } from '@/components/motion/fade-in';
 
-export default async function Home({
-  params: { lang },
-}: {
+type HomePageProps = {
   params: { lang: Locale };
-}) {
+};
+
+
+export default async function Home({ params: { lang } }: HomePageProps) {
   const dictionary = await getDictionary(lang);
   return (
     <div className="flex flex-col min-h-dvh">

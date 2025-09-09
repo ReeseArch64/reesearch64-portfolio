@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { MoveDown } from 'lucide-react';
 import { FadeInStagger, FadeIn } from '@/components/motion/fade-in';
+import { motion } from 'framer-motion';
 
 export default function HeroSection({ dictionary }: { dictionary: any }) {
   return (
