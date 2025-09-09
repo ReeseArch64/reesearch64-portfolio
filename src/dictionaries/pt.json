@@ -1,0 +1,69 @@
+
+{
+  "header": {
+    "about": "Sobre",
+    "skills": "Habilidades",
+    "contact": "Contato"
+  },
+  "footer": {
+    "rights": "Todos os Direitos Reservados"
+  },
+  "hero": {
+    "title": "Desenvolvedor Sênior de IA e Web",
+    "subtitle": "Construindo sistemas inteligentes e fluxos de trabalho automatizados com 10 anos de experiência.",
+    "contact": "Fale Comigo",
+    "skills": "Minhas Habilidades"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "p1": "Há mais de uma década, estou imerso no mundo do desenvolvimento de software, especializando-me na criação de sistemas web inteligentes, automatizados e robustos. Minha jornada me levou da construção de arquiteturas de backend escaláveis a soluções pioneiras de IA que resolvem problemas do mundo real.",
+    "p2": "Minha especialidade está na interseção entre Inteligência Artificial, automação de fluxos de trabalho e desenvolvimento web full-stack. Sou apaixonado por escrever código limpo e eficiente e arquitetar sistemas que não são apenas poderosos, mas também fáceis de manter e prazerosos de trabalhar. Eu prospero em enfrentar desafios complexos e transformar ideias inovadoras em produtos tangíveis e de alto impacto."
+  },
+  "skills": {
+    "title": "O Que Eu Faço",
+    "subtitle": "Minhas especialidades para dar vida às suas ideias.",
+    "categories": {
+      "ai": {
+        "title": "Inteligência Artificial e Machine Learning",
+        "description": "Crio sistemas inteligentes que aprendem, se adaptam e automatizam. Desde análises de dados complexas até IA generativa, projeto soluções que impulsionam a eficiência e a inovação."
+      },
+      "web": {
+        "title": "Desenvolvimento Web Full-Stack",
+        "description": "Construo aplicações web robustas, escaláveis e de alto desempenho de ponta a ponta. Cuido de tudo, desde a arquitetura do banco de dados até a criação de interfaces de usuário intuitivas e responsivas."
+      },
+      "automation": {
+        "title": "Automação de Processos",
+        "description": "Identifico gargalos e automatizo processos manuais repetitivos, conectando diferentes sistemas e serviços para criar fluxos de trabalho eficientes e autônomos que economizam tempo e reduzem erros."
+      },
+      "devops": {
+        "title": "DevOps e Implantação",
+        "description": "Garanto que as aplicações sejam implantadas e mantidas de forma eficiente e segura. Crio pipelines de CI/CD, gerencio infraestrutura em nuvem e garanto a estabilidade e escalabilidade dos sistemas."
+      }
+    }
+  },
+  "contact": {
+    "title": "Fale Comigo",
+    "subtitle": "Tem um projeto em mente ou quer se conectar? Deixe uma mensagem.",
+    "name": "Nome",
+    "name_placeholder": "Seu Nome",
+    "email": "Email",
+    "email_placeholder": "seu@email.com",
+    "message": "Mensagem",
+    "message_placeholder": "Vamos construir algo incrível juntos.",
+    "submit_button": {
+      "send": "Enviar Mensagem",
+      "sending": "Enviando..."
+    },
+    "toast": {
+      "success_title": "Mensagem Enviada!",
+      "error_title": "Erro"
+    },
+    "validation": {
+      "name_min": "O nome deve ter pelo menos 2 caracteres.",
+      "email_invalid": "Endereço de e-mail inválido.",
+      "message_min": "A mensagem deve ter pelo menos 10 caracteres.",
+      "correct_errors": "Por favor, corrija os erros abaixo.",
+      "success_message": "Obrigado pela sua mensagem! Entrarei em contato em breve."
+    }
+  }
+}
