@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'AI Hub Portfolio',
-  description: "A professional portfolio for a senior developer with 10 years of experience, focused on AI, automations, and web systems.",
+  title: 'ReeseArch64',
+  description: "ReeseArch64 - Soluções e automações com tecnologia de IA.",
 };
 
 export default function RootLayout({
