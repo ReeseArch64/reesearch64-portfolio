@@ -2,7 +2,6 @@ import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
 import HeroSection from '@/components/sections/hero';
 import AboutSection from '@/components/sections/about';
-import SkillsSection from '@/components/sections/skills';
 import ContactSection from '@/components/sections/contact';
 import { getDictionary } from '@/lib/get-dictionary';
 import { Locale, i18n } from '../../i18n-config';
@@ -23,9 +22,6 @@ export default async function Home({ searchParams }: HomePageProps) {
         <HeroSection dictionary={dictionary.hero} lang={lang}/>
         <FadeIn>
           <AboutSection dictionary={dictionary.about} />
-        </FadeIn>
-        <FadeIn>
-          <SkillsSection dictionary={dictionary.skills} />
         </FadeIn>
         <FadeIn>
           <ContactSection dictionary={dictionary.contact} />

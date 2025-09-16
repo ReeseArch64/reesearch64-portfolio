@@ -2,7 +2,6 @@
 {
   "header": {
     "about": "Sobre mí",
-    "skills": "Habilidades",
     "contact": "Contacto"
   },
   "footer": {
@@ -11,35 +10,12 @@
   "hero": {
     "title": "Desarrollador Senior AI y Web",
     "subtitle": "Construyendo sistemas inteligentes y flujos de trabajo automatizados con 10 años de experiencia.",
-    "contact": "Contáctame",
-    "skills": "Mis Habilidades"
+    "contact": "Contáctame"
   },
   "about": {
     "title": "Sobre Mí",
     "p1": "Durante más de una década, he estado inmerso en el mundo del desarrollo de software, especializándome en la creación de sistemas web inteligentes, automatizados y robustos. Mi viaje me ha llevado desde la construcción de arquitecturas de backend escalables hasta ser pionero en soluciones impulsadas por IA que resuelven problemas del mundo real.",
     "p2": "Mi experiencia se encuentra en la intersección de la Inteligencia Artificial, la automatización de flujos de trabajo y el desarrollo web full-stack. Me apasiona escribir código limpio y eficiente y diseñar sistemas que no solo son potentes sino también mantenibles y un placer trabajar con ellos. Me encanta enfrentar desafíos complejos y convertir ideas innovadoras en productos tangibles de alto impacto."
-  },
-  "skills": {
-    "title": "Lo Que Hago",
-    "subtitle": "Mis especialidades para dar vida a tus ideas.",
-    "categories": {
-      "ai": {
-        "title": "Inteligencia Artificial y Machine Learning",
-        "description": "Creo sistemas inteligentes que aprenden, se adaptan y automatizan. Desde análisis de datos complejos hasta IA generativa, diseño soluciones que impulsan la eficiencia y la innovación."
-      },
-      "web": {
-        "title": "Desarrollo Web Full-Stack",
-        "description": "Construyo aplicaciones web robustas, escalables y de alto rendimiento de principio a fin. Me encargo de todo, desde la arquitectura de la base de datos hasta la creación de interfaces de usuario intuitivas y receptivas."
-      },
-      "automation": {
-        "title": "Automatización de Procesos",
-        "description": "Identifico cuellos de botella y automatizo procesos manuales repetitivos, conectando diferentes sistemas y servicios para crear flujos de trabajo eficientes y autónomos que ahorran tiempo y reducen errores."
-      },
-      "devops": {
-        "title": "DevOps e Implementación",
-        "description": "Aseguro que las aplicaciones se implementen y mantengan de manera eficiente y segura. Creo canalizaciones de CI/CD, administro la infraestructura en la nube y garantizo la estabilidad y escalabilidad de los sistemas."
-      }
-    }
   },
   "contact": {
     "title": "Contáctame",

@@ -6,7 +6,6 @@ import { ThemeSwitcher } from './theme-switcher';
 
 const navLinks = [
   { href: '#about', key: 'about' },
-  { href: '#skills', key: 'skills' },
   { href: '#contact', key: 'contact' },
 ];
 

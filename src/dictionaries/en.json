@@ -2,7 +2,6 @@
 {
   "header": {
     "about": "About",
-    "skills": "Skills",
     "contact": "Contact"
   },
   "footer": {
@@ -11,35 +10,12 @@
   "hero": {
     "title": "Senior AI & Web Developer",
     "subtitle": "Building intelligent systems and automated workflows with 10 years of experience.",
-    "contact": "Contact Me",
-    "skills": "My Skills"
+    "contact": "Contact Me"
   },
   "about": {
     "title": "About Me",
     "p1": "For over a decade, I've been immersed in the world of software development, specializing in creating intelligent, automated, and robust web systems. My journey has taken me from building scalable backend architectures to pioneering AI-driven solutions that solve real-world problems.",
     "p2": "My expertise lies at the intersection of Artificial Intelligence, workflow automation, and full-stack web development. I'm passionate about writing clean, efficient code and architecting systems that are not only powerful but also maintainable and a joy to work with. I thrive on tackling complex challenges and turning innovative ideas into tangible, high-impact products."
-  },
-  "skills": {
-    "title": "What I Do",
-    "subtitle": "My specialties to bring your ideas to life.",
-    "categories": {
-      "ai": {
-        "title": "Artificial Intelligence & Machine Learning",
-        "description": "I create intelligent systems that learn, adapt, and automate. From complex data analysis to generative AI, I design solutions that drive efficiency and innovation."
-      },
-      "web": {
-        "title": "Full-Stack Web Development",
-        "description": "I build robust, scalable, and high-performance web applications from end to end. I handle everything from database architecture to creating intuitive and responsive user interfaces."
-      },
-      "automation": {
-        "title": "Process Automation",
-        "description": "I identify bottlenecks and automate repetitive manual processes, connecting different systems and services to create efficient and autonomous workflows that save time and reduce errors."
-      },
-      "devops": {
-        "title": "DevOps & Deployment",
-        "description": "I ensure that applications are deployed and maintained efficiently and securely. I create CI/CD pipelines, manage cloud infrastructure, and guarantee the stability and scalability of systems."
-      }
-    }
   },
   "contact": {
     "title": "Contact Me",

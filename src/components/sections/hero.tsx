@@ -30,9 +30,6 @@ export default function HeroSection({ dictionary, lang }: { dictionary: any, lan
               <Button asChild size="lg">
                 <Link href={`/?lang=${lang}#contact`}>{dictionary.contact}</Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link href={`/?lang=${lang}#skills`}>{dictionary.skills}</Link>
-              </Button>
             </div>
           </FadeIn>
         </FadeInStagger>
