@@ -3,7 +3,7 @@ import { FadeIn, FadeInStagger } from '@/components/motion/fade-in';
 
 export default function AboutSection({ dictionary }: { dictionary: any }) {
   return (
-    <section id="about" className="w-full py-24 sm:py-32 bg-secondary">
+    <section id="about" className="w-full py-24 sm:py-32">
       <div className="container mx-auto max-w-7xl px-4">
         <FadeInStagger className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="space-y-4">

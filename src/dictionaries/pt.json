@@ -2,6 +2,8 @@
 {
   "header": {
     "about": "Sobre",
+    "projects": "Projetos",
+    "skills": "Habilidades",
     "contact": "Contato"
   },
   "footer": {
@@ -16,6 +18,26 @@
     "title": "Sobre Mim",
     "p1": "Há mais de uma década, estou imerso no mundo do desenvolvimento de software, especializando-me na criação de sistemas web inteligentes, automatizados e robustos. Minha jornada me levou da construção de arquiteturas de backend escaláveis a soluções pioneiras de IA que resolvem problemas do mundo real.",
     "p2": "Minha especialidade está na interseção entre Inteligência Artificial, automação de fluxos de trabalho e desenvolvimento web full-stack. Sou apaixonado por escrever código limpo e eficiente e arquitetar sistemas que não são apenas poderosos, mas também fáceis de manter e prazerosos de trabalhar. Eu prospero em enfrentar desafios complexos e transformar ideias inovadoras em produtos tangíveis e de alto impacto."
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "subtitle": "Uma seleção de projetos que demonstram minha paixão por tecnologia e resolução de problemas.",
+    "p1_title": "Plataforma de E-commerce com IA",
+    "p1_desc": "Uma solução de e-commerce escalável com um motor de recomendação personalizado, aumentando o engajamento do usuário em 30%.",
+    "p2_title": "Dashboard de Dados em Tempo Real",
+    "p2_desc": "Um painel dinâmico para visualizar fluxos de dados complexos, fornecendo insights acionáveis para inteligência de negócios.",
+    "p3_title": "Ferramenta de Automação de Fluxo de Trabalho",
+    "p3_desc": "Uma ferramenta que automatiza processos de negócios repetitivos, economizando mais de 20 horas de trabalho manual por semana.",
+    "live_demo": "Demo ao Vivo",
+    "view_code": "Ver Código"
+  },
+  "skills": {
+    "title": "Minhas Habilidades",
+    "subtitle": "As tecnologias e ferramentas que uso para dar vida às ideias.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "ai_ml": "IA/ML",
+    "tools": "Ferramentas e Plataformas"
   },
   "contact": {
     "title": "Fale Comigo",

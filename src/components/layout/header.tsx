@@ -4,9 +4,12 @@ import LanguageSwitcher from './language-switcher';
 import { Locale } from '../../../i18n-config';
 import { ThemeSwitcher } from './theme-switcher';
 import { motion } from 'framer-motion';
+import { Code2 } from 'lucide-react';
 
 const navLinks = [
   { href: '#about', key: 'about' },
+  { href: '#projects', key: 'projects' },
+  { href: '#skills', key: 'skills' },
   { href: '#contact', key: 'contact' },
 ];
 
@@ -20,6 +23,7 @@ export default function Header({ lang, dictionary }: { lang: Locale, dictionary:
     >
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href={`/?lang=${lang}`} className="flex items-center gap-2">
+          <Code2 className="h-6 w-6 text-primary" />
           <span className="font-headline text-xl font-bold">ReeseArch64</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">

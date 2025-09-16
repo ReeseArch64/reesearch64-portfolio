@@ -2,6 +2,8 @@
 {
   "header": {
     "about": "Sobre mí",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
     "contact": "Contacto"
   },
   "footer": {
@@ -16,6 +18,26 @@
     "title": "Sobre Mí",
     "p1": "Durante más de una década, he estado inmerso en el mundo del desarrollo de software, especializándome en la creación de sistemas web inteligentes, automatizados y robustos. Mi viaje me ha llevado desde la construcción de arquitecturas de backend escalables hasta ser pionero en soluciones impulsadas por IA que resuelven problemas del mundo real.",
     "p2": "Mi experiencia se encuentra en la intersección de la Inteligencia Artificial, la automatización de flujos de trabajo y el desarrollo web full-stack. Me apasiona escribir código limpio y eficiente y diseñar sistemas que no solo son potentes sino también mantenibles y un placer trabajar con ellos. Me encanta enfrentar desafíos complejos y convertir ideas innovadoras en productos tangibles de alto impacto."
+  },
+  "projects": {
+    "title": "Mis Proyectos",
+    "subtitle": "Una selección de proyectos que muestran mi pasión por la tecnología y la resolución de problemas.",
+    "p1_title": "Plataforma de E-commerce con IA",
+    "p1_desc": "Una solución de e-commerce escalable con un motor de recomendaciones personalizado, que aumentó la participación del usuario en un 30%.",
+    "p2_title": "Dashboard de Datos en Tiempo Real",
+    "p2_desc": "Un dashboard dinámico para visualizar flujos de datos complejos, proporcionando información útil para la inteligencia de negocios.",
+    "p3_title": "Herramienta de Automatización de Flujos de Trabajo",
+    "p3_desc": "Una herramienta que automatiza procesos de negocio repetitivos, ahorrando más de 20 horas de trabajo manual por semana.",
+    "live_demo": "Demo en Vivo",
+    "view_code": "Ver Código"
+  },
+  "skills": {
+    "title": "Mis Habilidades",
+    "subtitle": "Las tecnologías y herramientas que utilizo para dar vida a las ideas.",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "ai_ml": "IA/ML",
+    "tools": "Herramientas y Plataformas"
   },
   "contact": {
     "title": "Contáctame",
