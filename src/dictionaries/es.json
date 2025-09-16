@@ -40,28 +40,7 @@
     "tools": "Herramientas y Plataformas"
   },
   "contact": {
-    "title": "Contáctame",
-    "subtitle": "¿Tienes un proyecto en mente o quieres conectar? Envíame un mensaje.",
-    "name": "Nombre",
-    "name_placeholder": "Tu Nombre",
-    "email": "Correo Electrónico",
-    "email_placeholder": "tu@email.com",
-    "message": "Mensaje",
-    "message_placeholder": "Construyamos algo increíble juntos.",
-    "submit_button": {
-      "send": "Enviar Mensaje",
-      "sending": "Enviando..."
-    },
-    "toast": {
-      "success_title": "¡Mensaje Enviado!",
-      "error_title": "Error"
-    },
-    "validation": {
-      "name_min": "El nombre debe tener al menos 2 caracteres.",
-      "email_invalid": "Dirección de correo electrónico no válida.",
-      "message_min": "El mensaje debe tener al menos 10 caracteres.",
-      "correct_errors": "Por favor, corrige los errores a continuación.",
-      "success_message": "¡Gracias por tu mensaje! Te responderé pronto."
-    }
+    "title": "Ponte en Contacto",
+    "subtitle": "¡Conectemos! Puedes encontrarme en estas plataformas."
   }
 }

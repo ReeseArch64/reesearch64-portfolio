@@ -1,47 +1,57 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
-import { submitContactForm } from '@/lib/actions';
+import { Github, Linkedin, Mail, Instagram } from 'lucide-react';
+import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { useEffect, useRef } from 'react';
-import { useToast } from '@/hooks/use-toast';
-import { Loader2 } from 'lucide-react';
 import { FadeIn, FadeInStagger } from '../motion/fade-in';
 
-function SubmitButton({ dictionary }: { dictionary: any }) {
-  const { pending } = useFormStatus();
-  return (
-    <Button type="submit" disabled={pending} className="w-full" size="lg">
-      {pending ? <><Loader2 className="mr-2 h-4 w-4 animate-spin" /> {dictionary.sending}</> : dictionary.send}
-    </Button>
-  );
-}
+const WhatsAppIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="h-5 w-5"
+  >
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+  </svg>
+);
+
+
+const socialLinks = [
+  {
+    name: 'github',
+    href: 'https://github.com',
+    icon: <Github className="h-5 w-5" />,
+  },
+  {
+    name: 'linkedin',
+    href: 'https://linkedin.com',
+    icon: <Linkedin className="h-5 w-5" />,
+  },
+  {
+    name: 'instagram',
+    href: 'https://instagram.com',
+    icon: <Instagram className="h-5 w-5" />,
+  },
+  {
+    name: 'email',
+    href: 'mailto:your-email@example.com',
+    icon: <Mail className="h-5 w-5" />,
+  },
+  {
+    name: 'whatsapp',
+    href: 'https://wa.me/YOUR_WHATSAPP_NUMBER',
+    icon: <WhatsAppIcon />,
+  },
+];
 
 export default function ContactSection({ dictionary }: { dictionary: any }) {
-  const initialState = { message: null, errors: {}, success: false, dictionary };
-  const [state, dispatch] = useFormState(submitContactForm, initialState);
-  const { toast } = useToast();
-  const formRef = useRef<HTMLFormElement>(null);
-
-  useEffect(() => {
-    if(state.success && state.message) {
-      toast({
-        title: dictionary.toast.success_title,
-        description: state.message,
-      });
-      formRef.current?.reset();
-    } else if (!state.success && state.message) {
-      toast({
-        variant: "destructive",
-        title: dictionary.toast.error_title,
-        description: state.message,
-      });
-    }
-  }, [state, toast, dictionary]);
-
   return (
     <section id="contact" className="w-full py-24 sm:py-32 bg-secondary">
       <div className="container mx-auto max-w-7xl px-4">
@@ -55,38 +65,17 @@ export default function ContactSection({ dictionary }: { dictionary: any }) {
             </p>
           </FadeIn>
         </div>
-        <div className="mx-auto mt-10 max-w-lg">
-          <FadeInStagger stagger={0.2} className="space-y-6">
-            <form ref={formRef} action={dispatch} className="space-y-6">
-              <FadeIn>
-                <div>
-                  <Label htmlFor="name" className="text-base">{dictionary.name}</Label>
-                  <Input id="name" name="name" type="text" placeholder={dictionary.name_placeholder} required className="mt-2 text-base" />
-                  {state.errors?.name && <p className="text-sm text-destructive mt-1">{state.errors.name}</p>}
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div>
-                  <Label htmlFor="email" className="text-base">{dictionary.email}</Label>
-                  <Input id="email" name="email" type="email" placeholder={dictionary.email_placeholder} required className="mt-2 text-base"/>
-                  {state.errors?.email && <p className="text-sm text-destructive mt-1">{state.errors.email}</p>}
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div>
-                  <Label htmlFor="message" className="text-base">{dictionary.message}</Label>
-                  <Textarea id="message" name="message" required rows={5} placeholder={dictionary.message_placeholder} className="mt-2 text-base"/>
-                  {state.errors?.message && <p className="text-sm text-destructive mt-1">{state.errors.message}</p>}
-                </div>
-              </FadeIn>
-              <FadeIn>
-                <div>
-                  <SubmitButton dictionary={dictionary.submit_button} />
-                </div>
-              </FadeIn>
-            </form>
-          </FadeInStagger>
-        </div>
+        <FadeInStagger stagger={0.1} className="mx-auto mt-10 flex max-w-lg justify-center gap-4">
+          {socialLinks.map((link, index) => (
+             <FadeIn key={index}>
+              <Button variant="ghost" size="icon" asChild>
+                <Link href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
+                  {link.icon}
+                </Link>
+              </Button>
+            </FadeIn>
+          ))}
+        </FadeInStagger>
       </div>
     </section>
   );

@@ -40,28 +40,7 @@
     "tools": "Tools & Platforms"
   },
   "contact": {
-    "title": "Contact Me",
-    "subtitle": "Have a project in mind or want to connect? Drop me a line.",
-    "name": "Name",
-    "name_placeholder": "Your Name",
-    "email": "Email",
-    "email_placeholder": "your@email.com",
-    "message": "Message",
-    "message_placeholder": "Let's build something amazing together.",
-    "submit_button": {
-      "send": "Send Message",
-      "sending": "Sending..."
-    },
-    "toast": {
-      "success_title": "Message Sent!",
-      "error_title": "Error"
-    },
-    "validation": {
-      "name_min": "Name must be at least 2 characters.",
-      "email_invalid": "Invalid email address.",
-      "message_min": "Message must be at least 10 characters.",
-      "correct_errors": "Please correct the errors below.",
-      "success_message": "Thank you for your message! I will get back to you soon."
-    }
+    "title": "Get in Touch",
+    "subtitle": "Let's connect! You can find me on these platforms."
   }
 }

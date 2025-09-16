@@ -40,28 +40,7 @@
     "tools": "Ferramentas e Plataformas"
   },
   "contact": {
-    "title": "Fale Comigo",
-    "subtitle": "Tem um projeto em mente ou quer se conectar? Deixe uma mensagem.",
-    "name": "Nome",
-    "name_placeholder": "Seu Nome",
-    "email": "Email",
-    "email_placeholder": "seu@email.com",
-    "message": "Mensagem",
-    "message_placeholder": "Vamos construir algo incrível juntos.",
-    "submit_button": {
-      "send": "Enviar Mensagem",
-      "sending": "Enviando..."
-    },
-    "toast": {
-      "success_title": "Mensagem Enviada!",
-      "error_title": "Erro"
-    },
-    "validation": {
-      "name_min": "O nome deve ter pelo menos 2 caracteres.",
-      "email_invalid": "Endereço de e-mail inválido.",
-      "message_min": "A mensagem deve ter pelo menos 10 caracteres.",
-      "correct_errors": "Por favor, corrija os erros abaixo.",
-      "success_message": "Obrigado pela sua mensagem! Entrarei em contato em breve."
-    }
+    "title": "Entre em Contato",
+    "subtitle": "Vamos nos conectar! Você pode me encontrar nessas plataformas."
   }
 }
