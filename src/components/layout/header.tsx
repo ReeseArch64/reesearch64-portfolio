@@ -14,7 +14,7 @@ export default function Header({ lang, dictionary }: { lang: Locale, dictionary:
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
-        <Link href={`/${lang}`} className="flex items-center gap-2">
+        <Link href={`/?lang=${lang}`} className="flex items-center gap-2">
           <Cpu className="h-6 w-6 text-primary" />
           <span className="font-headline text-xl font-bold">ReeseArch64</span>
         </Link>
@@ -23,7 +23,7 @@ export default function Header({ lang, dictionary }: { lang: Locale, dictionary:
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
-                  href={`/${lang}${link.href}`}
+                  href={`/?lang=${lang}${link.href}`}
                   className="transition-colors hover:text-primary"
                 >
                   {dictionary[link.key]}

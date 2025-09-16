@@ -1,6 +1,6 @@
 'use client';
 
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { i18n, Locale } from '../../../i18n-config';
 import { Button } from '@/components/ui/button';
@@ -14,12 +14,13 @@ import { Globe } from 'lucide-react';
 
 export default function LanguageSwitcher({ lang }: { lang: Locale }) {
   const pathName = usePathname();
+  const searchParams = useSearchParams();
 
   const redirectedPathName = (locale: Locale) => {
     if (!pathName) return '/';
-    const segments = pathName.split('/');
-    segments[1] = locale;
-    return segments.join('/');
+    const params = new URLSearchParams(searchParams.toString());
+    params.set('lang', locale);
+    return `${pathName}?${params.toString()}`;
   };
 
   const localeDisplayNames: { [key in Locale]: string } = {

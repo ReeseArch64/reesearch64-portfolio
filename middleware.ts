@@ -16,16 +16,19 @@ function getLocale(request: NextRequest): string | undefined {
 }
 
 export function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname;
-  const pathnameIsMissingLocale = i18n.locales.every(
-    (locale) => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
-  );
+  const { pathname, searchParams } = request.nextUrl;
+
+  // Check if there is any supported locale in the query
+  const lang = searchParams.get('lang');
+  if (lang && i18n.locales.includes(lang as any)) {
+    return NextResponse.next();
+  }
 
   // Redirect if there is no locale
-  if (pathnameIsMissingLocale) {
-    const locale = getLocale(request);
-    return NextResponse.redirect(new URL(`/${locale}${pathname}`, request.url));
-  }
+  const locale = getLocale(request);
+  request.nextUrl.searchParams.set('lang', locale!);
+  
+  return NextResponse.redirect(request.nextUrl);
 }
 
 export const config = {

@@ -1,12 +1,12 @@
-
 'use client';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { MoveDown } from 'lucide-react';
 import { FadeInStagger, FadeIn } from '@/components/motion/fade-in';
 import { motion } from 'framer-motion';
+import { Locale } from '../../../i18n-config';
 
-export default function HeroSection({ dictionary }: { dictionary: any }) {
+export default function HeroSection({ dictionary, lang }: { dictionary: any, lang: Locale }) {
   return (
     <section
       id="home"
@@ -28,10 +28,10 @@ export default function HeroSection({ dictionary }: { dictionary: any }) {
           <FadeIn>
             <div className="mt-10 flex flex-wrap justify-center gap-4">
               <Button asChild size="lg">
-                <Link href="#contact">{dictionary.contact}</Link>
+                <Link href={`/?lang=${lang}#contact`}>{dictionary.contact}</Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="#skills">{dictionary.skills}</Link>
+                <Link href={`/?lang=${lang}#skills`}>{dictionary.skills}</Link>
               </Button>
             </div>
           </FadeIn>
@@ -48,7 +48,7 @@ export default function HeroSection({ dictionary }: { dictionary: any }) {
             repeatType: 'reverse',
           }}
         >
-          <Link href="#about" aria-label="Scroll to about section">
+          <Link href={`/?lang=${lang}#about`} aria-label="Scroll to about section">
             <MoveDown className="w-8 h-8 text-muted-foreground" />
           </Link>
         </motion.div>
