@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export default function AboutSection({ dictionary }: { dictionary: any }) {
   return (
@@ -15,14 +15,10 @@ export default function AboutSection({ dictionary }: { dictionary: any }) {
             </p>
           </div>
           <div className="flex justify-center lg:justify-end">
-            <Image
-              src="https://picsum.photos/400/500"
-              alt="Developer Portrait"
-              width={400}
-              height={500}
-              className="rounded-lg shadow-lg aspect-[4/5] object-cover"
-              data-ai-hint="developer portrait"
-            />
+            <Avatar className="w-64 h-64 lg:w-80 lg:h-80 shadow-lg">
+              <AvatarImage src="https://avatars.githubusercontent.com/u/195439767?v=4" alt="Developer Portrait" />
+              <AvatarFallback>RA</AvatarFallback>
+            </Avatar>
           </div>
         </div>
       </div>
