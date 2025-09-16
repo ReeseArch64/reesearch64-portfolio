@@ -2,7 +2,6 @@
 {
   "header": {
     "about": "About",
-    "projects": "Projects",
     "skills": "Skills",
     "contact": "Contact"
   },
@@ -18,18 +17,6 @@
     "title": "About Me",
     "p1": "For over a decade, I've been immersed in the world of software development, specializing in creating intelligent, automated, and robust web systems. My journey has taken me from building scalable backend architectures to pioneering AI-driven solutions that solve real-world problems.",
     "p2": "My expertise lies at the intersection of Artificial Intelligence, workflow automation, and full-stack web development. I'm passionate about writing clean, efficient code and architecting systems that are not only powerful but also maintainable and a joy to work with. I thrive on tackling complex challenges and turning innovative ideas into tangible, high-impact products."
-  },
-  "projects": {
-    "title": "My Projects",
-    "subtitle": "A selection of projects that showcase my passion for technology and problem-solving.",
-    "p1_title": "AI-Powered E-commerce Platform",
-    "p1_desc": "A scalable e-commerce solution with a personalized recommendation engine, increasing user engagement by 30%.",
-    "p2_title": "Real-Time Data Dashboard",
-    "p2_desc": "A dynamic dashboard for visualizing complex data streams, providing actionable insights for business intelligence.",
-    "p3_title": "Workflow Automation Tool",
-    "p3_desc": "A tool that automates repetitive business processes, saving over 20 hours of manual work per week.",
-    "live_demo": "Live Demo",
-    "view_code": "View Code"
   },
   "skills": {
     "title": "My Skills",
