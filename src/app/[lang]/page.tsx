@@ -6,7 +6,6 @@ import AboutSection from '@/components/sections/about';
 import ContactSection from '@/components/sections/contact';
 import { getDictionary } from '@/lib/get-dictionary';
 import { Locale } from '../../../i18n-config';
-import { FadeIn } from '@/components/motion/fade-in';
 
 type HomePageProps = {
   params: { lang: Locale };
@@ -19,13 +18,9 @@ export default async function Home({ params: { lang } }: HomePageProps) {
     <div className="flex flex-col min-h-dvh">
       <Header lang={lang} dictionary={dictionary.header} />
       <main className="flex-grow">
-        <HeroSection dictionary={dictionary.hero} />
-        <FadeIn>
-          <AboutSection dictionary={dictionary.about} />
-        </FadeIn>
-        <FadeIn>
-          <ContactSection dictionary={dictionary.contact} />
-        </FadeIn>
+        <HeroSection dictionary={dictionary.hero} lang={lang} />
+        <AboutSection dictionary={dictionary.about} />
+        <ContactSection dictionary={dictionary.contact} />
       </main>
       <Footer dictionary={dictionary.footer} />
     </div>

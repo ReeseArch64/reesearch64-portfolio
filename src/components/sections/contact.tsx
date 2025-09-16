@@ -9,6 +9,7 @@ import { Label } from '@/components/ui/label';
 import { useEffect, useRef } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
+import { FadeIn, FadeInStagger } from '../motion/fade-in';
 
 function SubmitButton({ dictionary }: { dictionary: any }) {
   const { pending } = useFormStatus();
@@ -45,32 +46,46 @@ export default function ContactSection({ dictionary }: { dictionary: any }) {
     <section id="contact" className="w-full py-24 sm:py-32 bg-secondary">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">{dictionary.title}</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            {dictionary.subtitle}
-          </p>
+          <FadeIn>
+            <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl">{dictionary.title}</h2>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <p className="mt-4 text-lg text-muted-foreground">
+              {dictionary.subtitle}
+            </p>
+          </FadeIn>
         </div>
         <div className="mx-auto mt-10 max-w-lg">
-          <form ref={formRef} action={dispatch} className="space-y-6">
-            <div>
-              <Label htmlFor="name" className="text-base">{dictionary.name}</Label>
-              <Input id="name" name="name" type="text" placeholder={dictionary.name_placeholder} required className="mt-2 text-base" />
-              {state.errors?.name && <p className="text-sm text-destructive mt-1">{state.errors.name}</p>}
-            </div>
-            <div>
-              <Label htmlFor="email" className="text-base">{dictionary.email}</Label>
-              <Input id="email" name="email" type="email" placeholder={dictionary.email_placeholder} required className="mt-2 text-base"/>
-              {state.errors?.email && <p className="text-sm text-destructive mt-1">{state.errors.email}</p>}
-            </div>
-            <div>
-              <Label htmlFor="message" className="text-base">{dictionary.message}</Label>
-              <Textarea id="message" name="message" required rows={5} placeholder={dictionary.message_placeholder} className="mt-2 text-base"/>
-              {state.errors?.message && <p className="text-sm text-destructive mt-1">{state.errors.message}</p>}
-            </div>
-            <div>
-              <SubmitButton dictionary={dictionary.submit_button} />
-            </div>
-          </form>
+          <FadeInStagger stagger={0.2} className="space-y-6">
+            <form ref={formRef} action={dispatch} className="space-y-6">
+              <FadeIn>
+                <div>
+                  <Label htmlFor="name" className="text-base">{dictionary.name}</Label>
+                  <Input id="name" name="name" type="text" placeholder={dictionary.name_placeholder} required className="mt-2 text-base" />
+                  {state.errors?.name && <p className="text-sm text-destructive mt-1">{state.errors.name}</p>}
+                </div>
+              </FadeIn>
+              <FadeIn>
+                <div>
+                  <Label htmlFor="email" className="text-base">{dictionary.email}</Label>
+                  <Input id="email" name="email" type="email" placeholder={dictionary.email_placeholder} required className="mt-2 text-base"/>
+                  {state.errors?.email && <p className="text-sm text-destructive mt-1">{state.errors.email}</p>}
+                </div>
+              </FadeIn>
+              <FadeIn>
+                <div>
+                  <Label htmlFor="message" className="text-base">{dictionary.message}</Label>
+                  <Textarea id="message" name="message" required rows={5} placeholder={dictionary.message_placeholder} className="mt-2 text-base"/>
+                  {state.errors?.message && <p className="text-sm text-destructive mt-1">{state.errors.message}</p>}
+                </div>
+              </FadeIn>
+              <FadeIn>
+                <div>
+                  <SubmitButton dictionary={dictionary.submit_button} />
+                </div>
+              </FadeIn>
+            </form>
+          </FadeInStagger>
         </div>
       </div>
     </section>
