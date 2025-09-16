@@ -20,17 +20,6 @@ export default function Header({ lang, dictionary }: { lang: Locale, dictionary:
     >
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href={`/?lang=${lang}`} className="flex items-center gap-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 256 256"
-            className="h-6 w-6"
-          >
-            <rect width="256" height="256" fill="none"></rect>
-            <path
-              fill="currentColor"
-              d="M128,24a104,104,0,1,0,104,104A104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Z"
-            ></path>
-          </svg>
           <span className="font-headline text-xl font-bold">ReeseArch64</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">
