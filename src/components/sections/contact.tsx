@@ -26,27 +26,27 @@ const WhatsAppIcon = () => (
 const socialLinks = [
   {
     name: 'github',
-    href: 'https://github.com',
+    href: 'https://github.com/reesearch64',
     icon: <Github className="h-5 w-5" />,
   },
   {
     name: 'linkedin',
-    href: 'https://linkedin.com',
+    href: 'https://linkedin.com/in/reesearch64',
     icon: <Linkedin className="h-5 w-5" />,
   },
   {
     name: 'instagram',
-    href: 'https://instagram.com',
+    href: 'https://instagram.com/reesearch64',
     icon: <Instagram className="h-5 w-5" />,
   },
   {
     name: 'email',
-    href: 'mailto:your-email@example.com',
+    href: 'mailto:contact@reesearch64.tech',
     icon: <Mail className="h-5 w-5" />,
   },
   {
     name: 'whatsapp',
-    href: 'https://wa.me/YOUR_WHATSAPP_NUMBER',
+    href: 'https://wa.me/556295268587',
     icon: <WhatsAppIcon />,
   },
 ];

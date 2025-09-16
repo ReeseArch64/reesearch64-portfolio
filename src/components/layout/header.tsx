@@ -22,7 +22,6 @@ export default function Header({ lang, dictionary }: { lang: Locale, dictionary:
     >
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
         <Link href={`/?lang=${lang}`} className="flex items-center gap-2">
-          <Code2 className="h-6 w-6 text-primary" />
           <span className="font-headline text-xl font-bold">ReeseArch64</span>
         </Link>
         <nav className="hidden items-center gap-6 md:flex">

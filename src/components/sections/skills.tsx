@@ -9,22 +9,22 @@ export default function SkillsSection({ dictionary }: { dictionary: any }) {
     frontend: {
       title: dictionary.frontend,
       icon: <Lightbulb className="h-8 w-8 text-primary" />,
-      skills: ['TypeScript', 'React', 'Next.js', 'Tailwind CSS', 'Framer Motion'],
+      skills: ['TypeScript', 'Angular', 'Next.js', 'TailwindCSS', 'Bootstrap 4/5', 'Blazor'],
     },
     backend: {
       title: dictionary.backend,
       icon: <Server className="h-8 w-8 text-primary" />,
-      skills: ['Node.js', 'Python', 'Go', 'PostgreSQL', 'MongoDB', 'GraphQL'],
+      skills: ['Node.js', 'Python', 'PostgreSQL', 'MongoDB', 'GraphQL', 'Java'],
     },
     ai_ml: {
       title: dictionary.ai_ml,
       icon: <Bot className="h-8 w-8 text-primary" />,
-      skills: ['Genkit', 'TensorFlow', 'PyTorch', 'Scikit-learn', 'LangChain'],
+      skills: ['Genkit', 'TensorFlow', 'PyTorch', 'Gemini/GPT', 'n8n'],
     },
     tools: {
       title: dictionary.tools,
       icon: <Wrench className="h-8 w-8 text-primary" />,
-      skills: ['Docker', 'Kubernetes', 'Google Cloud', 'AWS', 'Git & CI/CD'],
+      skills: ['Docker', 'Kubernetes', 'GCP/Azure', 'AWS', 'CI/CD'],
     },
   };
   
