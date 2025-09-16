@@ -7,6 +7,8 @@ import { getDictionary } from '@/lib/get-dictionary';
 import { Locale, i18n } from '../../i18n-config';
 import { FadeIn } from '@/components/motion/fade-in';
 import SkillsSection from '@/components/sections/skills';
+import { headers } from 'next/headers';
+import { URL } from 'url';
 
 type HomePageProps = {
   searchParams: { [key: string]: string | string[] | undefined };
@@ -14,8 +16,15 @@ type HomePageProps = {
 
 
 export default async function Home({ searchParams }: HomePageProps) {
-  const lang = (searchParams.lang as Locale) || i18n.defaultLocale;
+  let lang = i18n.defaultLocale as Locale;
+  const langParam = searchParams.lang;
+  
+  if (langParam && i18n.locales.includes(langParam as any)) {
+    lang = langParam as Locale;
+  }
+
   const dictionary = await getDictionary(lang);
+
   return (
     <div className="flex flex-col min-h-dvh">
       <Header lang={lang} dictionary={dictionary.header} />

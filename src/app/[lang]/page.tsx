@@ -6,6 +6,8 @@ import AboutSection from '@/components/sections/about';
 import ContactSection from '@/components/sections/contact';
 import { getDictionary } from '@/lib/get-dictionary';
 import { Locale } from '../../../i18n-config';
+import { FadeIn } from '@/components/motion/fade-in';
+import SkillsSection from '@/components/sections/skills';
 
 type HomePageProps = {
   params: { lang: Locale };
@@ -19,10 +21,22 @@ export default async function Home({ params: { lang } }: HomePageProps) {
       <Header lang={lang} dictionary={dictionary.header} />
       <main className="flex-grow">
         <HeroSection dictionary={dictionary.hero} lang={lang} />
-        <AboutSection dictionary={dictionary.about} />
-        <ContactSection dictionary={dictionary.contact} />
+        <FadeIn>
+          <AboutSection dictionary={dictionary.about} />
+        </FadeIn>
+        <FadeIn>
+          <SkillsSection dictionary={dictionary.skills} />
+        </FadeIn>
+        <FadeIn>
+          <ContactSection dictionary={dictionary.contact} />
+        </FadeIn>
       </main>
       <Footer dictionary={dictionary.footer} />
     </div>
   );
 }
+
+export const metadata = {
+  title: 'ReeseArch64',
+  description: 'ReeseArch64 - AI-powered solutions and automations.',
+};
