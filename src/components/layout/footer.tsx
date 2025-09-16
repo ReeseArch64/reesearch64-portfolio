@@ -2,12 +2,19 @@
 import { Github, Linkedin } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { motion } from 'framer-motion';
 
 export default function Footer({ dictionary }: { dictionary: any }) {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full border-t border-border/40">
+    <motion.footer 
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className="w-full border-t border-border/40"
+    >
       <div className="container mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row">
         <p className="text-sm text-muted-foreground">
           &copy; {currentYear} ReeseArch64. {dictionary.rights}.
@@ -25,6 +32,6 @@ export default function Footer({ dictionary }: { dictionary: any }) {
           </Button>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
