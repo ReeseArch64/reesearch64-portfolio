@@ -18,13 +18,11 @@ function getLocale(request: NextRequest): string | undefined {
 export function middleware(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl;
 
-  // Check if there is any supported locale in the query
   const lang = searchParams.get('lang');
   if (lang && i18n.locales.includes(lang as any)) {
     return NextResponse.next();
   }
 
-  // Redirect if there is no locale
   const locale = getLocale(request);
   request.nextUrl.searchParams.set('lang', locale!);
   
@@ -32,6 +30,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Matcher ignoring `/_next/` and `/api/`
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 };

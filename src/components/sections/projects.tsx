@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { ExternalLink, Github } from 'lucide-react';
 import { FadeIn, FadeInStagger } from '../motion/fade-in';
 import { getPlaceholderImage } from '@/lib/placeholder-images';

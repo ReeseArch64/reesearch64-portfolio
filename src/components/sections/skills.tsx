@@ -1,5 +1,5 @@
 import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { FadeIn, FadeInStagger } from '../motion/fade-in';
 import { Lightbulb, Server, Bot, Wrench } from 'lucide-react';
 

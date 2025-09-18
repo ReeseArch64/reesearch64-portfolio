@@ -1,7 +1,9 @@
+import './globals.css';
+
 import { Toaster } from '@/components/ui/toaster';
 import { Inter, Space_Grotesk } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
-import './globals.css';
+import { Metadata } from 'next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -15,6 +17,11 @@ const spaceGrotesk = Space_Grotesk({
   variable: '--font-space-grotesk',
 });
 
+export const metadata: Metadata = {
+  manifest: "/site.webmanifest",
+  title: "ReeseArch64",
+  description: "Portfolio Alan Guerra"
+}
 
 export default function RootLayout({
   children,

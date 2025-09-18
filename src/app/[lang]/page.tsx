@@ -13,7 +13,6 @@ type HomePageProps = {
   params: { lang: Locale };
 };
 
-
 export default async function Home({ params: { lang } }: HomePageProps) {
   const dictionary = await getDictionary(lang);
   return (
@@ -35,8 +34,3 @@ export default async function Home({ params: { lang } }: HomePageProps) {
     </div>
   );
 }
-
-export const metadata = {
-  title: 'ReeseArch64',
-  description: 'ReeseArch64 - AI-powered solutions and automations.',
-};

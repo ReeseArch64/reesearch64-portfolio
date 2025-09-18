@@ -1,10 +1,10 @@
 'use client';
+
 import Link from 'next/link';
 import LanguageSwitcher from './language-switcher';
 import { Locale } from '../../../i18n-config';
 import { ThemeSwitcher } from './theme-switcher';
 import { motion } from 'framer-motion';
-import { Code2 } from 'lucide-react';
 
 const navLinks = [
   { href: '#about', key: 'about' },

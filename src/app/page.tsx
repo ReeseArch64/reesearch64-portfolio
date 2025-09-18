@@ -7,13 +7,10 @@ import { getDictionary } from '@/lib/get-dictionary';
 import { Locale, i18n } from '../../i18n-config';
 import { FadeIn } from '@/components/motion/fade-in';
 import SkillsSection from '@/components/sections/skills';
-import { headers } from 'next/headers';
-import { URL } from 'url';
 
 type HomePageProps = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
-
 
 export default async function Home({ searchParams }: HomePageProps) {
   let lang = i18n.defaultLocale as Locale;
@@ -44,8 +41,3 @@ export default async function Home({ searchParams }: HomePageProps) {
     </div>
   );
 }
-
-export const metadata = {
-  title: 'ReeseArch64',
-  description: 'ReeseArch64 - AI-powered solutions and automations.',
-};
