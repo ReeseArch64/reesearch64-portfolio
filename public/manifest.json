@@ -1,0 +1,36 @@
+{
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "any",
+      "src": "/favicon.svg",
+      "type": "image/svg+xml"
+    },
+    {
+      "sizes": "96x96",
+      "src": "/favicon-96x96.png",
+      "type": "image/png"
+    },
+    {
+      "sizes": "180x180",
+      "src": "/apple-touch-icon.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "192x192",
+      "src": "/web-app-manifest-192x192.png",
+      "type": "image/png"
+    },
+    {
+      "purpose": "maskable",
+      "sizes": "512x512",
+      "src": "/web-app-manifest-512x512.png",
+      "type": "image/png"
+    }
+  ],
+  "name": "ReeseArch64",
+  "short_name": "GReeseArch64S",
+  "theme_color": "#ffffff"
+}

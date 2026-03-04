@@ -1,0 +1,67 @@
+{
+  "common": {
+    "error": {
+      "message": "Falha ao carregar os dados. Tente novamente mais tarde.",
+      "retry": "Tentar novamente",
+      "title": "Ops! Algo deu errado",
+      "unexpected": "Erro inesperado ao carregar os dados."
+    },
+    "image": {
+      "alt": "Logo {{name}}",
+      "notAvailable": "Imagem não disponível"
+    },
+    "loading": "Carregando portfólio..."
+  },
+  "experiences": {
+    "description": "Organizações com as quais já atuei em projetos e iniciativas.",
+    "title": "Experiências"
+  },
+  "footer": {
+    "credit": "Criado por <span>{{name}}</span> © {{year}}",
+    "name": "Alan Guerra"
+  },
+  "header": {
+    "logo": "RA64",
+    "theme": {
+      "dark": "Escuro",
+      "light": "Claro",
+      "system": "Sistema",
+      "toggle": "Alternar tema"
+    }
+  },
+  "metadata": {
+    "description": "Portfólio profissional de Alan Guerra, desenvolvedor full stack especializado em aplicações modernas e performáticas",
+    "title": "Alan Guerra - Engenheiro de Software"
+  },
+  "profile": {
+    "description": "Como Engenheiro de Software Senior e Especialista em Sistemas Escaláveis, foco na criação de arquiteturas distribuídas que sustentam o crescimento acelerado de negócios complexos. Meu trabalho está na convergência entre desenvolvimento Full-Stack moderno e infraestrutura resiliente, garantindo que a tecnologia seja o motor da inovação e da eficiência operacional.",
+    "name": "Alan Guerra",
+    "photoAlt": "Foto de Alan Guerra",
+    "role": "Engenheiro de Software Senior"
+  },
+  "projects": {
+    "categories": {
+      "all": "Todos"
+    },
+    "categoryFilter": "Filtro",
+    "description": "Catálogo dos meus projetos em estilo streaming, com busca e filtros.",
+    "footer": {
+      "loadMore": "Carregar +5 projetos",
+      "showing": "Exibindo {{visible}} de {{total}} projeto(s)"
+    },
+    "noResults": "Nenhum projeto encontrado com os filtros atuais.",
+    "results": "{{count}} resultado(s)",
+    "searchPlaceholder": "Buscar projeto, stack ou descrição...",
+    "title": "Projetos",
+    "viewProject": "Ver projeto"
+  },
+  "skills": {
+    "clearSearch": "Limpar busca",
+    "count": "{{count}} tecnologias",
+    "description": "Tecnologias e ferramentas que domino no dia a dia",
+    "footer": "🚀 Sempre estudando e evoluindo para entregar soluções melhores",
+    "noResults": "Nenhuma tecnologia encontrada para \"{{searchTerm}}\"",
+    "searchPlaceholder": "Buscar tecnologia (nome ou variante)...",
+    "title": "Habilidades"
+  }
+}

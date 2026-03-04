@@ -1,0 +1,67 @@
+{
+  "common": {
+    "error": {
+      "message": "Failed to load data. Please try again later.",
+      "retry": "Try again",
+      "title": "Oops! Something went wrong",
+      "unexpected": "Unexpected error loading data."
+    },
+    "image": {
+      "alt": "{{name}} logo",
+      "notAvailable": "Image not available"
+    },
+    "loading": "Loading portfolio..."
+  },
+  "experiences": {
+    "description": "Organizations I've worked with on projects and initiatives.",
+    "title": "Experiences"
+  },
+  "footer": {
+    "credit": "Created by <span>{{name}}</span> © {{year}}",
+    "name": "Alan Guerra"
+  },
+  "header": {
+    "logo": "RA64",
+    "theme": {
+      "dark": "Dark",
+      "light": "Light",
+      "system": "System",
+      "toggle": "Toggle theme"
+    }
+  },
+  "metadata": {
+    "description": "Professional portfolio of Alan Guerra, full stack developer specialized in modern and performant applications",
+    "title": "Alan Guerra - Full Stack Developer"
+  },
+  "profile": {
+    "description": "As a Senior Software Engineer and Scalable Systems Specialist, I focus on creating distributed architectures that support the accelerated growth of complex businesses. My work centers on the convergence between modern Full-Stack development and resilient infrastructure, ensuring that technology is the engine of innovation and operational efficiency.",
+    "name": "Alan Guerra",
+    "photoAlt": "Photo of Alan Guerra",
+    "role": "Senior Software Engineer"
+  },
+  "projects": {
+    "categories": {
+      "all": "All"
+    },
+    "categoryFilter": "Filter",
+    "description": "Catalog of my projects in streaming style, with search and filters.",
+    "footer": {
+      "loadMore": "Load +5 projects",
+      "showing": "Showing {{visible}} of {{total}} project(s)"
+    },
+    "noResults": "No projects found with current filters.",
+    "results": "{{count}} result(s)",
+    "searchPlaceholder": "Search project, stack or description...",
+    "title": "Projects",
+    "viewProject": "View project"
+  },
+  "skills": {
+    "clearSearch": "Clear search",
+    "count": "{{count}} technologies",
+    "description": "Technologies and tools I master on a daily basis",
+    "footer": "🚀 Always studying and evolving to deliver better solutions",
+    "noResults": "No technologies found for \"{{searchTerm}}\"",
+    "searchPlaceholder": "Search technology (name or variant)...",
+    "title": "Skills"
+  }
+}
