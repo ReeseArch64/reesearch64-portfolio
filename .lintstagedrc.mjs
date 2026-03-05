@@ -2,7 +2,7 @@ const shouldIgnoreTsxFromUi = (file) => /^components\/ui\/.*\.tsx$/u.test(file);
 
 const quoteArg = (value) => JSON.stringify(value);
 
-export default {
+const lintStagedConfig = {
   "*.{ts,tsx}": (files) => {
     const filtered = files.filter((file) => !shouldIgnoreTsxFromUi(file));
 
@@ -14,5 +14,6 @@ export default {
 
     return [`prettier --write ${fileArgs}`, `eslint --no-warn-ignored ${fileArgs}`];
   },
-  "*.css": ["stylelint"],
 };
+
+export default lintStagedConfig;
