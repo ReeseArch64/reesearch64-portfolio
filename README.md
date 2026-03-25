@@ -2,6 +2,8 @@
 
 Personal portfolio built with **Next.js 16**, **React 19**, **TypeScript**, and **Tailwind CSS v4**, focused on performance, accessibility, and a modern user experience.
 
+![Screenshot of the portfolio homepage](./screenshot.png)
+
 ## ✨ Features
 
 - Responsive interface with light/dark/system theme support.
