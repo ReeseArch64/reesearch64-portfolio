@@ -73,13 +73,8 @@ interface IExperience {
   period?: string;
 }
 
-const PLACEHOLDER_IMAGE =
-  "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' fill='%23f0f0f0'/%3E%3Ctext x='20' y='25' font-size='14' text-anchor='middle' fill='%23999' font-family='Arial'%3E%3F%3C/text%3E%3C/svg%3E";
+const PLACEHOLDER_IMAGE = "/placeholder.jpg";
 
-const buildProjectPlaceholder = (text: string): string => {
-  const encodedText = encodeURIComponent(text);
-  return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 260 112'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23f0f0f0'/%3E%3Cstop offset='100%25' stop-color='%23e0e0e0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='260' height='112' fill='url(%23g)'/%3E%3Ctext x='130' y='65' font-size='16' text-anchor='middle' fill='%23999' font-family='Arial'%3E${encodedText}%3C/text%3E%3C/svg%3E`;
-};
 
 export default function Home() {
   const { setTheme } = useTheme();
@@ -241,14 +236,12 @@ export default function Home() {
     setVisibleProjectsCount(5);
   }, [projectSearchTerm, projectCategory]);
 
-  const getImageUrl = (url: string | null, type: "project" | "experience" = "project"): string => {
+  const getImageUrl = (url: string | null): string => {
     const cleanedUrl = cleanUrl(url);
     if (cleanedUrl && isValidUrl(cleanedUrl)) {
       return cleanedUrl;
     }
-    return type === "project"
-      ? buildProjectPlaceholder(t("common.image.notAvailable"))
-      : PLACEHOLDER_IMAGE;
+    return PLACEHOLDER_IMAGE;
   };
 
   const footerCreditText = t("footer.credit", {
@@ -489,7 +482,7 @@ export default function Home() {
                         <div
                           className="h-28 bg-cover bg-center p-4"
                           style={{
-                            backgroundImage: `url(${getImageUrl(project.imageUrl, "project")})`,
+                            backgroundImage: `url(${getImageUrl(project.imageUrl)})`,
                             backgroundColor: "#f5f5f5",
                           }}
                         >
@@ -563,25 +556,21 @@ export default function Home() {
                       className="group bg-card hover:border-primary/40 rounded-lg border p-4 transition-all hover:-translate-y-1 hover:shadow-md"
                     >
                       <div className="bg-muted/40 flex h-20 items-center justify-center rounded-md p-2">
-                        {experience.logo && isValidUrl(cleanUrl(experience.logo)) ? (
-                          <Image
-                            src={cleanUrl(experience.logo) || ""}
-                            alt={t("common.image.alt", { name: experience.name })}
-                            width={56}
-                            height={56}
-                            unoptimized
-                            className="h-14 w-auto object-contain"
-                          />
-                        ) : (
-                          <Image
-                            src={PLACEHOLDER_IMAGE}
-                            alt={t("common.image.alt", { name: experience.name })}
-                            width={56}
-                            height={56}
-                            unoptimized
-                            className="h-14 w-auto object-contain"
-                          />
-                        )}
+                        <Image
+                          src={
+                            experience.logo && isValidUrl(cleanUrl(experience.logo))
+                              ? cleanUrl(experience.logo)!
+                              : PLACEHOLDER_IMAGE
+                          }
+                          alt={t("common.image.alt", { name: experience.name })}
+                          width={56}
+                          height={56}
+                          unoptimized
+                          className="h-14 w-auto object-contain"
+                          onError={(e) => {
+                            (e.currentTarget as HTMLImageElement).src = PLACEHOLDER_IMAGE;
+                          }}
+                        />
                       </div>
                       <p className="text-foreground mt-3 text-center text-sm font-medium">
                         {experience.name}
