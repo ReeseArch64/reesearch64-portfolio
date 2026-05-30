@@ -220,7 +220,7 @@ export default function Home() {
   }, [projects, t]);
 
   const filteredProjects = useMemo(() => {
-    return projects.filter((project) => {
+    return [...projects].reverse().filter((project) => {
       const matchesSearch =
         !projectSearchTerm.trim() ||
         (() => {
@@ -546,9 +546,11 @@ export default function Home() {
                             ))}
                           </div>
                           {project.url && (
-                            <Button variant="ghost" size="sm" className="mt-auto w-full" asChild>
+                            <Button variant="ghost" size="sm" className="mt-auto w-full text-red-500 hover:text-red-600" asChild>
                               <Link href={project.url} target="_blank" rel="noopener noreferrer">
-                                {t("projects.viewProject")}
+                                {project.url.startsWith("https://github.com/ReeseArch64/")
+                                  ? t("projects.viewRepository")
+                                  : t("projects.viewProject")}
                               </Link>
                             </Button>
                           )}

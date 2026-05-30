@@ -57,7 +57,8 @@
     "results": "{{count}} resultado(s)",
     "searchPlaceholder": "Buscar proyecto, stack o descripción...",
     "title": "Proyectos",
-    "viewProject": "Ver proyecto"
+    "viewProject": "Ver proyecto",
+    "viewRepository": "Ver Repositorio"
   },
   "skills": {
     "clearSearch": "Limpiar búsqueda",

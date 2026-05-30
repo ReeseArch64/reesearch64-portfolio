@@ -57,7 +57,8 @@
     "results": "{{count}} result(s)",
     "searchPlaceholder": "Search project, stack or description...",
     "title": "Projects",
-    "viewProject": "View project"
+    "viewProject": "View project",
+    "viewRepository": "View Repository"
   },
   "skills": {
     "clearSearch": "Clear search",
