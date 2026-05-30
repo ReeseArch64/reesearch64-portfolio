@@ -43,7 +43,11 @@
     "categories": {
       "all": "Todos"
     },
-    "categoryFilter": "Filtro",
+    "categoryFilter": "Categoría",
+    "stackFilter": "Stack",
+    "stacks": {
+      "all": "Todas"
+    },
     "description": "Catálogo de mis proyectos en estilo streaming, con búsqueda y filtros.",
     "footer": {
       "loadMore": "Cargar +5 proyectos",

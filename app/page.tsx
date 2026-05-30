@@ -83,6 +83,7 @@ export default function Home() {
   const [projectSearchTerm, setProjectSearchTerm] = useState("");
   const [projectCategory, setProjectCategory] = useState("all");
   const [visibleProjectsCount, setVisibleProjectsCount] = useState(5);
+  const [projectStack, setProjectStack] = useState("all");
   const [skills] = useState<ISkill[]>(() =>
     (skillsData as any[]).map((skill: any) => ({
       name: typeof skill === "string" ? skill : skill.name,
@@ -210,6 +211,14 @@ export default function Home() {
     ];
   }, [projects, t]);
 
+  const projectStacks = useMemo(() => {
+    const stacks = projects.flatMap((p) => p.stack);
+    return [
+      { value: "all", label: t("projects.stacks.all") },
+      ...new Set(stacks).values().map((stack) => ({ value: stack, label: stack })),
+    ];
+  }, [projects, t]);
+
   const filteredProjects = useMemo(() => {
     return projects.filter((project) => {
       const matchesSearch =
@@ -225,10 +234,11 @@ export default function Home() {
         })();
 
       const matchesCategory = projectCategory === "all" || project.category === projectCategory;
+      const matchesStack = projectStack === "all" || project.stack.includes(projectStack);
 
-      return matchesSearch && matchesCategory;
+      return matchesSearch && matchesCategory && matchesStack;
     });
-  }, [projectSearchTerm, projectCategory, projects]);
+  }, [projectSearchTerm, projectCategory, projectStack, projects]);
 
   const visibleProjects = useMemo(() => {
     return filteredProjects.slice(0, visibleProjectsCount);
@@ -236,7 +246,7 @@ export default function Home() {
 
   useEffect(() => {
     setVisibleProjectsCount(5);
-  }, [projectSearchTerm, projectCategory]);
+  }, [projectSearchTerm, projectCategory, projectStack]);
 
   const getImageUrl = (url: string | null): string => {
     const cleanedUrl = cleanUrl(url);
@@ -432,7 +442,7 @@ export default function Home() {
                   </Badge>
                 </div>
 
-                <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+                <div className="grid grid-cols-1 gap-3 md:grid-cols-4">
                   <div className="relative md:col-span-2">
                     <Search className="text-muted-foreground absolute top-1/2 left-3 h-4 w-4 -translate-y-1/2" />
                     <Input
@@ -448,8 +458,8 @@ export default function Home() {
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button variant="outline" className="w-full justify-between">
-                        {projectCategories.find((category) => category.value === projectCategory)
-                          ?.label ?? t("projects.categories.all")}
+                        {projectCategories.find((c) => c.value === projectCategory)?.label ??
+                          t("projects.categories.all")}
                         <span className="text-muted-foreground text-xs">
                           {t("projects.categoryFilter")}
                         </span>
@@ -465,6 +475,31 @@ export default function Home() {
                           onClick={() => setProjectCategory(category.value)}
                         >
                           {category.label}
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="outline" className="w-full justify-between">
+                        {projectStacks.find((s) => s.value === projectStack)?.label ??
+                          t("projects.stacks.all")}
+                        <span className="text-muted-foreground text-xs">
+                          {t("projects.stackFilter")}
+                        </span>
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent
+                      align="end"
+                      className="max-h-60 w-[var(--radix-dropdown-menu-trigger-width)] min-w-56 overflow-y-auto"
+                    >
+                      {projectStacks.map((stack) => (
+                        <DropdownMenuItem
+                          key={stack.value}
+                          onClick={() => setProjectStack(stack.value)}
+                        >
+                          {stack.label}
                         </DropdownMenuItem>
                       ))}
                     </DropdownMenuContent>
