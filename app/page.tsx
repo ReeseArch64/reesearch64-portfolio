@@ -449,6 +449,8 @@ export default function Home() {
                 <div className="from-primary to-secondary absolute inset-0 rounded-full bg-gradient-to-tr opacity-20 blur-xl" />
                 <Image
                   src="https://avatars.githubusercontent.com/u/195439767?s=256&v=4"
+                  width={128}
+                  height={128}
                   alt={t("profile.photoAlt")}
                   className="border-background relative h-32 w-32 rounded-full border-4 object-cover shadow-xl transition-transform hover:scale-105"
                   priority
