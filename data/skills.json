@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Next.js",
+    "variants": [
+      "next.js",
+      "nextjs",
+      "Next.js",
+      "NextJS"
+    ]
+  },
+  {
+    "name": "TailwindCSS",
+    "variants": [
+      "tailwindcss",
+      "tailwind css",
+      "TailwindCSS",
+      "Tailwind CSS"
+    ]
+  },
+  {
+    "name": "TypeScript",
+    "variants": [
+      "typescript",
+      "TypeScript",
+      "TS",
+      "ts"
+    ]
+  },
+  {
+    "name": "React",
+    "variants": [
+      "react",
+      "reactjs",
+      "react.js",
+      "React.js",
+      "ReactJS"
+    ]
+  },
+  {
+    "name": "Next Themes",
+    "variants": [
+      "next-themes",
+      "Next Themes",
+      "next themes",
+      "nextthemes"
+    ]
+  },
+  {
+    "name": "Lucide React",
+    "variants": [
+      "lucide-react",
+      "Lucide React",
+      "lucide react",
+      "lucidereact"
+    ]
+  },
+  {
+    "name": "Radix UI",
+    "variants": [
+      "radix-ui",
+      "Radix UI",
+      "radix ui",
+      "radixui"
+    ]
+  },
+  {
+    "name": "React Dom",
+    "variants": [
+      "react-dom",
+      "React Dom",
+      "react dom",
+      "reactdom"
+    ]
+  },
+  {
+    "name": "Node.js",
+    "variants": [
+      "nodejs",
+      "node.js",
+      "Node.js",
+      "NodeJS"
+    ]
+  },
+  {
+    "name": "Semantic Release",
+    "variants": [
+      "semantic-release",
+      "Semantic Release",
+      "semantic release"
+    ]
+  },
+  {
+    "name": "Vercel",
+    "variants": [
+      "vercel",
+      "Vercel"
+    ]
+  },
+  {
+    "name": "Eslint",
+    "variants": [
+      "eslint",
+      "ESLint",
+      "EsLint"
+    ]
+  },
+  {
+    "name": "Prettier",
+    "variants": [
+      "prettier",
+      "Prettier"
+    ]
+  },
+  {
+    "name": "Husky",
+    "variants": [
+      "husky",
+      "Husky"
+    ]
+  },
+  {
+    "name": "Lint Staged",
+    "variants": [
+      "lint-staged",
+      "Lint Staged",
+      "lint staged"
+    ]
+  },
+  {
+    "name": "Commitizen",
+    "variants": [
+      "commitizen",
+      "Commitizen"
+    ]
+  },
+  {
+    "name": "Commitlint",
+    "variants": [
+      "commitlint",
+      "Commitlint"
+    ]
+  },
+  {
+    "name": "Shadcn UI",
+    "variants": [
+      "shadcn-ui",
+      "shadcn ui",
+      "Shadcn UI",
+      "shadcnui"
+    ]
+  }
+]

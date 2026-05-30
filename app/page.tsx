@@ -21,6 +21,9 @@ import { Separator } from "@/components/ui/separator";
 import enUS from "@/i18n/en-US.json";
 import esES from "@/i18n/es-ES.json";
 import ptBR from "@/i18n/pt-BR.json";
+import experiencesData from "@/data/experiences.json";
+import projectsData from "@/data/projects.json";
+import skillsData from "@/data/skills.json";
 import {
   Code2,
   Github,
@@ -38,8 +41,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 
-const dataCache = new Map();
-const CACHE_DURATION = 5 * 60 * 1000;
 const SUPPORTED_LOCALES = ["pt-BR", "en-US", "es-ES"] as const;
 
 type Locale = (typeof SUPPORTED_LOCALES)[number];
@@ -87,13 +88,24 @@ export default function Home() {
   const [projectSearchTerm, setProjectSearchTerm] = useState("");
   const [projectCategory, setProjectCategory] = useState("all");
   const [visibleProjectsCount, setVisibleProjectsCount] = useState(5);
-  const [skills, setSkills] = useState<ISkill[]>([]);
-  const [projects, setProjects] = useState<IProject[]>([]);
-  const [experiences, setExperiences] = useState<IExperience[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [errorKey, setErrorKey] = useState<
-    "common.error.message" | "common.error.unexpected" | null
-  >(null);
+  const [skills] = useState<ISkill[]>(() =>
+    (skillsData as any[]).map((skill: any) => ({
+      name: typeof skill === "string" ? skill : skill.name,
+      variants: skill.variants || [],
+    }))
+  );
+  const [projects] = useState<IProject[]>(() =>
+    (projectsData as any[]).map((project: any) => ({
+      ...project,
+      imageUrl: project.imageUrl || null,
+    }))
+  );
+  const [experiences] = useState<IExperience[]>(() =>
+    (experiencesData as any[]).map((exp: any) => ({
+      ...exp,
+      logo: exp.logo || null,
+    }))
+  );
 
   const currentYear = new Date().getFullYear();
   const translations = useMemo(() => translationsByLocale[locale], [locale]);
@@ -177,103 +189,6 @@ export default function Home() {
     return cleaned;
   };
 
-  const fetchWithCache = useCallback(async <T,>(key: string, url: string): Promise<T> => {
-    const cached = dataCache.get(key);
-    if (cached && Date.now() - cached.timestamp < CACHE_DURATION) {
-      return cached.data;
-    }
-
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
-    const data = await response.json();
-
-    dataCache.set(key, {
-      data,
-      timestamp: Date.now(),
-    });
-
-    return data;
-  }, []);
-
-  useEffect(() => {
-    const loadAllData = async () => {
-      setIsLoading(true);
-      setErrorKey(null);
-
-      try {
-        const [skillsData, projectsData, experiencesData] = await Promise.allSettled([
-          fetchWithCache<ISkill[]>(
-            "skills",
-            "https://raw.githubusercontent.com/ReeseArch64/reesearch64-api/refs/heads/main/api/data/skills.json"
-          ),
-          fetchWithCache<IProject[]>(
-            "projects",
-            "https://raw.githubusercontent.com/ReeseArch64/reesearch64-api/refs/heads/main/api/data/projects.json"
-          ),
-          fetchWithCache<IExperience[]>(
-            "experiences",
-            "https://raw.githubusercontent.com/ReeseArch64/reesearch64-api/refs/heads/main/api/data/experiences.json"
-          ),
-        ]);
-
-        if (skillsData.status === "fulfilled") {
-          const formattedSkills = Array.isArray(skillsData.value)
-            ? skillsData.value.map((skill: any) => ({
-                name: typeof skill === "string" ? skill : skill.name,
-                variants: skill.variants || [],
-              }))
-            : [];
-          setSkills(formattedSkills);
-        } else {
-          console.error("Falha ao carregar skills:", skillsData.reason);
-          setSkills([]);
-        }
-
-        if (projectsData.status === "fulfilled") {
-          const formattedProjects = Array.isArray(projectsData.value)
-            ? projectsData.value.map((project) => ({
-                ...project,
-                imageUrl: project.imageUrl || null,
-              }))
-            : [];
-          setProjects(formattedProjects);
-        } else {
-          console.error("Falha ao carregar projetos:", projectsData.reason);
-          setProjects([]);
-        }
-
-        if (experiencesData.status === "fulfilled") {
-          const formattedExperiences = Array.isArray(experiencesData.value)
-            ? experiencesData.value.map((exp) => ({
-                ...exp,
-                logo: exp.logo || null,
-              }))
-            : [];
-          setExperiences(formattedExperiences);
-        } else {
-          console.error("Falha ao carregar experiências:", experiencesData.reason);
-          setExperiences([]);
-        }
-
-        if (
-          skillsData.status === "rejected" &&
-          projectsData.status === "rejected" &&
-          experiencesData.status === "rejected"
-        ) {
-          setErrorKey("common.error.message");
-        }
-      } catch (error) {
-        console.error("Erro crítico ao carregar dados:", error);
-        setErrorKey("common.error.unexpected");
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadAllData();
-  }, [fetchWithCache]);
 
   const filteredSkills = useMemo(() => {
     if (!searchTerm.trim()) return skills;
@@ -354,34 +269,6 @@ export default function Home() {
 
     return "PT";
   }, [locale]);
-
-  if (isLoading) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        <div className="text-center">
-          <div className="border-primary mx-auto h-16 w-16 animate-spin rounded-full border-4 border-t-transparent" />
-          <p className="text-muted-foreground mt-4">{t("common.loading")}</p>
-        </div>
-      </div>
-    );
-  }
-
-  if (errorKey) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        <div className="max-w-md p-6 text-center">
-          <div className="bg-destructive/10 mx-auto w-fit rounded-full p-3">
-            <span className="text-3xl">😕</span>
-          </div>
-          <h2 className="mt-4 text-xl font-semibold">{t("common.error.title")}</h2>
-          <p className="text-muted-foreground mt-2">{t(errorKey)}</p>
-          <Button className="mt-4" onClick={() => window.location.reload()}>
-            {t("common.error.retry")}
-          </Button>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div className="from-background via-background to-secondary/20 relative flex min-h-dvh flex-col bg-gradient-to-b">

@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Reesearch64 Portfolio",
+    "category": "Web Application",
+    "summary": "A modern, performant and accessible portfolio built with Next.js 13, Tailwind CSS and TypeScript, showcasing my projects, skills and experiences in a dynamic and engaging way.",
+    "stack": [
+      "Next.js",
+      "TailwindCSS",
+      "TypeScript",
+      "React",
+      "Next Themes",
+      "Lucide React",
+      "Radix UI",
+      "React Dom",
+      "Node.js",
+      "Semantic Release",
+      "Vercel",
+      "Eslint",
+      "Prettier",
+      "Husky",
+      "Lint Staged",
+      "Commitizen",
+      "Commitlint",
+      "Shadcn UI"
+    ],
+    "url": "https://github.com/ReeseArch64/reesearch64-portfolio",
+    "imageUrl": "https://raw.githubusercontent.com/ReeseArch64/reesearch64-portfolio/refs/heads/main/screenshot.png"
+  }
+]
