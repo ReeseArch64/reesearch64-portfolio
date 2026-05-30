@@ -1,21 +1,5 @@
 [
   {
-    "title": "EliteBux",
-    "category": "Discord Bot",
-    "summary": "Discord bot for a Robux store; sales are made through integration with CentralCart, using Pix as the payment method, with manual delivery by staff.",
-    "stack": [
-      "TypeScript",
-      "Node.js",
-      "Zod",
-      "Central Cart",
-      "Discord.js",
-      "MongoDB",
-      "Mongoose"
-    ],
-    "url": "https://elitebux.centralcart.com.br",
-    "imageUrl": "/projects/banner-elite-bux.png"
-  },
-  {
     "title": "Reesearch64 Portfolio",
     "category": "Web Application",
     "summary": "A modern, performant and accessible portfolio built with Next.js 13, Tailwind CSS and TypeScript, showcasing my projects, skills and experiences in a dynamic and engaging way.",
@@ -41,5 +25,32 @@
     ],
     "url": "https://github.com/ReeseArch64/reesearch64-portfolio",
     "imageUrl": "https://raw.githubusercontent.com/ReeseArch64/reesearch64-portfolio/refs/heads/main/screenshot.png"
+  },
+  {
+    "title": "EliteBux",
+    "category": "Discord Bot",
+    "summary": "Discord bot for a Robux store; sales are made through integration with CentralCart, using Pix as the payment method, with manual delivery by staff.",
+    "stack": [
+      "TypeScript",
+      "Node.js",
+      "Zod",
+      "Central Cart",
+      "Discord.js",
+      "MongoDB",
+      "Mongoose"
+    ],
+    "url": "https://elitebux.centralcart.com.br",
+    "imageUrl": "/projects/banner-elite-bux.png"
+  },
+  {
+    "title": "Dr. Ronaldo Leandro",
+    "category": "Landing Page",
+    "summary": "Landing page de captação focada em SEO para o Dr. Ronaldo Leandro (OAB/SP 386.746), advogado criminalista especialista em crimes sexuais em São Paulo.",
+    "stack": [
+      "TailwindCSS",
+      "HTML"
+    ],
+    "url": "https://reesearch64.github.io/dr-ronaldo-leandro-crimes-sexuais/",
+    "imageUrl": "/projects/dr-ronaldo-leandro-crimes-sexuais.png"
   }
 ]
