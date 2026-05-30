@@ -43,6 +43,17 @@
     "imageUrl": "/projects/banner-elite-bux.png"
   },
   {
+    "title": "Personal Presentation",
+    "category": "Web Application",
+    "summary": "A single-page personal presentation website for GitHub Pages hosting.",
+    "stack": [
+      "HTML",
+      "CSS"
+    ],
+    "url": "https://reesearch64.github.io/",
+    "imageUrl": "/projects/reesearcy64.github.io.png"
+  },
+  {
     "title": "Dr. Ronaldo Leandro",
     "category": "Landing Page",
     "summary": "Landing page de captação focada em SEO para o Dr. Ronaldo Leandro (OAB/SP 386.746), advogado criminalista especialista em crimes sexuais em São Paulo.",
