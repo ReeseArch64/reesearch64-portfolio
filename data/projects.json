@@ -1,5 +1,21 @@
 [
   {
+    "title": "EliteBux",
+    "category": "Discord Bot",
+    "summary": "Discord bot for a Robux store; sales are made through integration with CentralCart, using Pix as the payment method, with manual delivery by staff.",
+    "stack": [
+      "TypeScript",
+      "Node.js",
+      "Zod",
+      "Central Cart",
+      "Discord.js",
+      "MongoDB",
+      "Mongoose"
+    ],
+    "url": "https://elitebux.centralcart.com.br",
+    "imageUrl": "/projects/banner-elite-bux.png"
+  },
+  {
     "title": "Reesearch64 Portfolio",
     "category": "Web Application",
     "summary": "A modern, performant and accessible portfolio built with Next.js 13, Tailwind CSS and TypeScript, showcasing my projects, skills and experiences in a dynamic and engaging way.",

@@ -174,12 +174,14 @@ export default function Home() {
     if (!url) return null;
     let cleaned = url.trim();
     cleaned = cleaned.replace(/%20/g, "");
+    if (cleaned.startsWith("/") || cleaned.startsWith("http://") || cleaned.startsWith("https://")) {
+      return cleaned;
+    }
     if (cleaned.startsWith("//")) {
-      cleaned = "https:" + cleaned;
-    } else if (!cleaned.startsWith("http://") && !cleaned.startsWith("https://")) {
-      if (cleaned.includes(".")) {
-        cleaned = "https://" + cleaned;
-      }
+      return "https:" + cleaned;
+    }
+    if (cleaned.includes(".")) {
+      return "https://" + cleaned;
     }
     return cleaned;
   };
@@ -238,7 +240,7 @@ export default function Home() {
 
   const getImageUrl = (url: string | null): string => {
     const cleanedUrl = cleanUrl(url);
-    if (cleanedUrl && isValidUrl(cleanedUrl)) {
+    if (cleanedUrl && (cleanedUrl.startsWith("/") || isValidUrl(cleanedUrl))) {
       return cleanedUrl;
     }
     return PLACEHOLDER_IMAGE;
@@ -482,20 +484,22 @@ export default function Home() {
                         <div
                           className="h-28 bg-cover bg-center p-4"
                           style={{
-                            backgroundImage: `url(${getImageUrl(project.imageUrl)})`,
-                            backgroundColor: "#f5f5f5",
+                            backgroundImage: project.imageUrl
+                              ? `url(${getImageUrl(project.imageUrl)})`
+                              : "none",
+                            backgroundColor: "#e5e7eb",
                           }}
                         >
                           <div className="bg-background/80 inline-flex rounded-full px-2 py-1 text-xs font-medium backdrop-blur-sm">
                             {project.category}
                           </div>
                         </div>
-                        <div className="space-y-3 p-4">
+                        <div className="flex flex-col gap-3 p-4">
                           <h3 className="line-clamp-1 font-semibold">{project.title}</h3>
                           <p className="text-muted-foreground line-clamp-2 text-sm">
                             {project.summary}
                           </p>
-                          <div className="flex flex-wrap gap-2">
+                          <div className="flex h-16 flex-wrap content-start gap-1 overflow-hidden">
                             {project.stack.map((tech) => (
                               <Badge
                                 key={`${project.title}-${tech}`}
@@ -507,7 +511,7 @@ export default function Home() {
                             ))}
                           </div>
                           {project.url && (
-                            <Button variant="ghost" size="sm" className="mt-2 w-full" asChild>
+                            <Button variant="ghost" size="sm" className="mt-auto w-full" asChild>
                               <Link href={project.url} target="_blank" rel="noopener noreferrer">
                                 {t("projects.viewProject")}
                               </Link>
@@ -557,11 +561,12 @@ export default function Home() {
                     >
                       <div className="bg-muted/40 flex h-20 items-center justify-center rounded-md p-2">
                         <Image
-                          src={
-                            experience.logo && isValidUrl(cleanUrl(experience.logo))
-                              ? cleanUrl(experience.logo)!
-                              : PLACEHOLDER_IMAGE
-                          }
+                          src={(() => {
+                            const url = cleanUrl(experience.logo);
+                            return url && (url.startsWith("/") || isValidUrl(url))
+                              ? url
+                              : PLACEHOLDER_IMAGE;
+                          })()}
                           alt={t("common.image.alt", { name: experience.name })}
                           width={56}
                           height={56}
