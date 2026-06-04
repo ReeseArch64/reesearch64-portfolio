@@ -148,5 +148,760 @@
       "Shadcn UI",
       "shadcnui"
     ]
+  },
+  {
+    "name": "C#",
+    "variants": [
+      "c#",
+      "C#",
+      "csharp",
+      "CSharp"
+    ]
+  },
+  {
+    "name": "JavaScript",
+    "variants": [
+      "javascript",
+      "JavaScript",
+      "JS",
+      "js"
+    ]
+  },
+  {
+    "name": "Go",
+    "variants": [
+      "go",
+      "Go",
+      "golang",
+      "Golang"
+    ]
+  },
+  {
+    "name": "Lovable",
+    "variants": [
+      "lovable",
+      "Lovable"
+    ]
+  },
+  {
+    "name": "Claude Code",
+    "variants": [
+      "claude-code",
+      "Claude Code",
+      "claude code",
+      "claudecode"
+    ]
+  },
+  {
+    "name": "Open Claude",
+    "variants": [
+      "open-claude",
+      "Open Claude",
+      "open claude",
+      "openclaude"
+    ]
+  },
+  {
+    "name": "Cursor",
+    "variants": [
+      "cursor",
+      "Cursor"
+    ]
+  },
+  {
+    "name": "Python",
+    "variants": [
+      "python",
+      "Python",
+      "py",
+      "PY"
+    ]
+  },
+  {
+    "name": "UV",
+    "variants": [
+      "uv",
+      "UV"
+    ]
+  },
+  {
+    "name": "Bash",
+    "variants": [
+      "bash",
+      "Bash"
+    ]
+  },
+  {
+    "name": "Shell Script",
+    "variants": [
+      "shell-script",
+      "Shell Script",
+      "shell script",
+      "shellscript",
+      "sh"
+    ]
+  },
+  {
+    "name": "TanStack Router",
+    "variants": [
+      "tanstack-router",
+      "TanStack Router",
+      "tanstack router",
+      "tanstackrouter"
+    ]
+  },
+  {
+    "name": "ViteJS",
+    "variants": [
+      "vitejs",
+      "ViteJS",
+      "vite",
+      "Vite",
+      "vite.js",
+      "Vite.js"
+    ]
+  },
+  {
+    "name": "ChatGPT",
+    "variants": [
+      "chatgpt",
+      "ChatGPT",
+      "chat-gpt",
+      "chat gpt"
+    ]
+  },
+  {
+    "name": "Codex",
+    "variants": [
+      "codex",
+      "Codex"
+    ]
+  },
+  {
+    "name": "Azure",
+    "variants": [
+      "azure",
+      "Azure",
+      "Microsoft Azure"
+    ]
+  },
+  {
+    "name": "Amazon S3",
+    "variants": [
+      "amazon-s3",
+      "Amazon S3",
+      "amazon s3",
+      "s3",
+      "S3",
+      "AWS S3"
+    ]
+  },
+  {
+    "name": "Discord.js",
+    "variants": [
+      "discord.js",
+      "Discord.js",
+      "discordjs",
+      "DiscordJS"
+    ]
+  },
+  {
+    "name": "Nx",
+    "variants": [
+      "nx",
+      "Nx"
+    ]
+  },
+  {
+    "name": "Turborepo",
+    "variants": [
+      "turborepo",
+      "Turborepo",
+      "turbo-repo",
+      "turbo repo"
+    ]
+  },
+  {
+    "name": "Express.js",
+    "variants": [
+      "express.js",
+      "Express.js",
+      "expressjs",
+      "ExpressJS",
+      "express"
+    ]
+  },
+  {
+    "name": "Elysia.js",
+    "variants": [
+      "elysia.js",
+      "Elysia.js",
+      "elysiajs",
+      "ElysiaJS",
+      "elysia"
+    ]
+  },
+  {
+    "name": ".NET",
+    "variants": [
+      ".net",
+      ".NET",
+      "dotnet",
+      "DotNet"
+    ]
+  },
+  {
+    "name": ".NET Framework",
+    "variants": [
+      ".net framework",
+      ".NET Framework",
+      "dotnet framework",
+      "DotNet Framework"
+    ]
+  },
+  {
+    "name": "Angular",
+    "variants": [
+      "angular",
+      "Angular",
+      "angularjs",
+      "AngularJS"
+    ]
+  },
+  {
+    "name": "Expo.js",
+    "variants": [
+      "expo.js",
+      "Expo.js",
+      "expo",
+      "Expo",
+      "expojs",
+      "ExpoJS"
+    ]
+  },
+  {
+    "name": "Nativewind",
+    "variants": [
+      "nativewind",
+      "NativeWind",
+      "Nativewind",
+      "native-wind"
+    ]
+  },
+  {
+    "name": "Prisma ORM",
+    "variants": [
+      "prisma",
+      "Prisma",
+      "prisma-orm",
+      "Prisma ORM",
+      "prisma orm"
+    ]
+  },
+  {
+    "name": "Laravel",
+    "variants": [
+      "laravel",
+      "Laravel"
+    ]
+  },
+  {
+    "name": "Kong Gateway",
+    "variants": [
+      "kong",
+      "Kong",
+      "kong-gateway",
+      "Kong Gateway",
+      "kong gateway"
+    ]
+  },
+  {
+    "name": "Vue.js",
+    "variants": [
+      "vue.js",
+      "Vue.js",
+      "vuejs",
+      "VueJS",
+      "vue",
+      "Vue"
+    ]
+  },
+  {
+    "name": "MySQL",
+    "variants": [
+      "mysql",
+      "MySQL"
+    ]
+  },
+  {
+    "name": "Monorepo",
+    "variants": [
+      "monorepo",
+      "Monorepo",
+      "mono-repo",
+      "mono repo"
+    ]
+  },
+  {
+    "name": "Bun.js",
+    "variants": [
+      "bun.js",
+      "Bun.js",
+      "bunjs",
+      "BunJS",
+      "bun",
+      "Bun"
+    ]
+  },
+  {
+    "name": "Biome.js",
+    "variants": [
+      "biome.js",
+      "Biome.js",
+      "biomejs",
+      "BiomeJS",
+      "biome",
+      "Biome"
+    ]
+  },
+  {
+    "name": "Google Gemini",
+    "variants": [
+      "google-gemini",
+      "Google Gemini",
+      "google gemini",
+      "gemini",
+      "Gemini"
+    ]
+  },
+  {
+    "name": "Kubernetes",
+    "variants": [
+      "kubernetes",
+      "Kubernetes",
+      "k8s",
+      "K8s"
+    ]
+  },
+  {
+    "name": "Redis",
+    "variants": [
+      "redis",
+      "Redis"
+    ]
+  },
+  {
+    "name": "MongoDB",
+    "variants": [
+      "mongodb",
+      "MongoDB",
+      "mongo",
+      "Mongo"
+    ]
+  },
+  {
+    "name": "Google Cloud Platform",
+    "variants": [
+      "google-cloud-platform",
+      "Google Cloud Platform",
+      "google cloud platform",
+      "gcp",
+      "GCP",
+      "Google Cloud"
+    ]
+  },
+  {
+    "name": "Microsoft SQL Server",
+    "variants": [
+      "microsoft-sql-server",
+      "Microsoft SQL Server",
+      "mssql",
+      "MSSQL",
+      "sql server",
+      "SQL Server"
+    ]
+  },
+  {
+    "name": "SQLite",
+    "variants": [
+      "sqlite",
+      "SQLite"
+    ]
+  },
+  {
+    "name": "PostgreSQL",
+    "variants": [
+      "postgresql",
+      "PostgreSQL",
+      "postgres",
+      "Postgres"
+    ]
+  },
+  {
+    "name": "Terraform",
+    "variants": [
+      "terraform",
+      "Terraform"
+    ]
+  },
+  {
+    "name": "Amazon Web Services",
+    "variants": [
+      "amazon-web-services",
+      "Amazon Web Services",
+      "aws",
+      "AWS"
+    ]
+  },
+  {
+    "name": "GraphQL",
+    "variants": [
+      "graphql",
+      "GraphQL"
+    ]
+  },
+  {
+    "name": "Jasmine",
+    "variants": [
+      "jasmine",
+      "Jasmine",
+      "jasmine-framework",
+      "Jasmine Framework"
+    ]
+  },
+  {
+    "name": "Karma",
+    "variants": [
+      "karma",
+      "Karma"
+    ]
+  },
+  {
+    "name": "MSTest",
+    "variants": [
+      "mstest",
+      "MSTest"
+    ]
+  },
+  {
+    "name": "Elasticsearch",
+    "variants": [
+      "elasticsearch",
+      "Elasticsearch",
+      "elastic-search",
+      "elastic search"
+    ]
+  },
+  {
+    "name": "Serverless",
+    "variants": [
+      "serverless",
+      "Serverless",
+      "computação sem servidores"
+    ]
+  },
+  {
+    "name": "Microservices",
+    "variants": [
+      "microservices",
+      "Microservices",
+      "microsserviços",
+      "micro-services"
+    ]
+  },
+  {
+    "name": "Docker",
+    "variants": [
+      "docker",
+      "Docker"
+    ]
+  },
+  {
+    "name": "React Native",
+    "variants": [
+      "react-native",
+      "React Native",
+      "react native",
+      "reactnative"
+    ]
+  },
+  {
+    "name": "Spring Cloud",
+    "variants": [
+      "spring-cloud",
+      "Spring Cloud",
+      "spring cloud"
+    ]
+  },
+  {
+    "name": "Spring Security",
+    "variants": [
+      "spring-security",
+      "Spring Security",
+      "spring security"
+    ]
+  },
+  {
+    "name": "SQL",
+    "variants": [
+      "sql",
+      "SQL"
+    ]
+  },
+  {
+    "name": "xUnit",
+    "variants": [
+      "xunit",
+      "xUnit",
+      "XUnit"
+    ]
+  },
+  {
+    "name": "Entity Framework",
+    "variants": [
+      "entity-framework",
+      "Entity Framework",
+      "entity framework",
+      "ef",
+      "EF"
+    ]
+  },
+  {
+    "name": "Spring Framework",
+    "variants": [
+      "spring-framework",
+      "Spring Framework",
+      "spring framework",
+      "spring",
+      "Spring"
+    ]
+  },
+  {
+    "name": "Spring MVC",
+    "variants": [
+      "spring-mvc",
+      "Spring MVC",
+      "spring mvc"
+    ]
+  },
+  {
+    "name": "ASP.NET Web API",
+    "variants": [
+      "asp.net-web-api",
+      "ASP.NET Web API",
+      "asp.net web api",
+      "webapi",
+      "Web API"
+    ]
+  },
+  {
+    "name": "Spring Boot",
+    "variants": [
+      "spring-boot",
+      "Spring Boot",
+      "spring boot",
+      "springboot"
+    ]
+  },
+  {
+    "name": "Java",
+    "variants": [
+      "java",
+      "Java"
+    ]
+  },
+  {
+    "name": "ASP.NET AJAX",
+    "variants": [
+      "asp.net-ajax",
+      "ASP.NET AJAX",
+      "asp.net ajax"
+    ]
+  },
+  {
+    "name": "Visual Basic .NET",
+    "variants": [
+      "visual-basic-.net",
+      "Visual Basic .NET",
+      "vb.net",
+      "VB.NET",
+      "Visual Basic"
+    ]
+  },
+  {
+    "name": "ASP.NET MVC",
+    "variants": [
+      "asp.net-mvc",
+      "ASP.NET MVC",
+      "asp.net mvc"
+    ]
+  },
+  {
+    "name": "ASP.NET",
+    "variants": [
+      "asp.net",
+      "ASP.NET",
+      "aspnet"
+    ]
+  },
+  {
+    "name": "ASP.NET Core",
+    "variants": [
+      "asp.net-core",
+      "ASP.NET Core",
+      "asp.net core",
+      "aspnetcore"
+    ]
+  },
+  {
+    "name": ".NET Core",
+    "variants": [
+      ".net-core",
+      ".NET Core",
+      ".net core",
+      "dotnet-core",
+      "dotnet core"
+    ]
+  },
+  {
+    "name": "FastAPI",
+    "variants": [
+      "fastapi",
+      "FastAPI",
+      "fast-api"
+    ]
+  },
+  {
+    "name": "Flask",
+    "variants": [
+      "flask",
+      "Flask"
+    ]
+  },
+  {
+    "name": "Django REST Framework",
+    "variants": [
+      "django-rest-framework",
+      "Django REST Framework",
+      "django rest framework",
+      "drf",
+      "DRF"
+    ]
+  },
+  {
+    "name": "Django",
+    "variants": [
+      "django",
+      "Django"
+    ]
+  },
+  {
+    "name": "Materialize CSS",
+    "variants": [
+      "materialize-css",
+      "Materialize CSS",
+      "materialize css",
+      "materialize",
+      "Materialize"
+    ]
+  },
+  {
+    "name": "Bulma",
+    "variants": [
+      "bulma",
+      "Bulma",
+      "bulma-css",
+      "Bulma CSS"
+    ]
+  },
+  {
+    "name": "LESS",
+    "variants": [
+      "less",
+      "LESS",
+      "less.js"
+    ]
+  },
+  {
+    "name": "SASS",
+    "variants": [
+      "sass",
+      "SASS",
+      "scss",
+      "SCSS"
+    ]
+  },
+  {
+    "name": "Nest.js",
+    "variants": [
+      "nest.js",
+      "Nest.js",
+      "nestjs",
+      "NestJS"
+    ]
+  },
+  {
+    "name": "Fastify.js",
+    "variants": [
+      "fastify.js",
+      "Fastify.js",
+      "fastify",
+      "Fastify",
+      "fastifyjs",
+      "FastifyJS"
+    ]
+  },
+  {
+    "name": "Babel.js",
+    "variants": [
+      "babel.js",
+      "Babel.js",
+      "babel",
+      "Babel",
+      "babeljs",
+      "BabelJS"
+    ]
+  },
+  {
+    "name": "React Query",
+    "variants": [
+      "react-query",
+      "React Query",
+      "react query",
+      "tanstack-query",
+      "TanStack Query"
+    ]
+  },
+  {
+    "name": "Zustand",
+    "variants": [
+      "zustand",
+      "Zustand"
+    ]
+  },
+  {
+    "name": "Redux.js",
+    "variants": [
+      "redux.js",
+      "Redux.js",
+      "redux",
+      "Redux",
+      "reduxjs",
+      "ReduxJS"
+    ]
+  },
+  {
+    "name": "Bootstrap",
+    "variants": [
+      "bootstrap",
+      "Bootstrap"
+    ]
+  },
+  {
+    "name": "Blazor",
+    "variants": [
+      "blazor",
+      "Blazor"
+    ]
   }
 ]
