@@ -68,5 +68,10 @@
     "noResults": "No se encontraron tecnologías para \"{{searchTerm}}\"",
     "searchPlaceholder": "Buscar tecnología (nombre o variante)...",
     "title": "Habilidades"
+  },
+  "pagination": {
+    "previous": "Anterior",
+    "next": "Siguiente",
+    "page": "Página {{current}} de {{total}}"
   }
 }

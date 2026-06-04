@@ -25,6 +25,8 @@ import experiencesData from "@/data/experiences.json";
 import projectsData from "@/data/projects.json";
 import skillsData from "@/data/skills.json";
 import {
+  ChevronLeft,
+  ChevronRight,
   Code2,
   Github,
   Instagram,
@@ -74,15 +76,17 @@ interface IExperience {
 }
 
 const PLACEHOLDER_IMAGE = "/placeholder.jpg";
-
+const SKILLS_PER_PAGE = 24;
+const PROJECTS_PER_PAGE = 6;
 
 export default function Home() {
   const { setTheme } = useTheme();
   const [locale, setLocale] = useState<Locale>("pt-BR");
   const [searchTerm, setSearchTerm] = useState("");
+  const [skillsPage, setSkillsPage] = useState(1);
   const [projectSearchTerm, setProjectSearchTerm] = useState("");
   const [projectCategory, setProjectCategory] = useState("all");
-  const [visibleProjectsCount, setVisibleProjectsCount] = useState(5);
+  const [projectsPage, setProjectsPage] = useState(1);
   const [projectStack, setProjectStack] = useState("all");
   const [skills] = useState<ISkill[]>(() =>
     (skillsData as any[]).map((skill: any) => ({
@@ -240,13 +244,33 @@ export default function Home() {
     });
   }, [projectSearchTerm, projectCategory, projectStack, projects]);
 
+  const totalProjectsPages = useMemo(
+    () => Math.max(1, Math.ceil(filteredProjects.length / PROJECTS_PER_PAGE)),
+    [filteredProjects.length]
+  );
+
   const visibleProjects = useMemo(() => {
-    return filteredProjects.slice(0, visibleProjectsCount);
-  }, [filteredProjects, visibleProjectsCount]);
+    const start = (projectsPage - 1) * PROJECTS_PER_PAGE;
+    return filteredProjects.slice(start, start + PROJECTS_PER_PAGE);
+  }, [filteredProjects, projectsPage]);
+
+  const totalSkillsPages = useMemo(
+    () => Math.max(1, Math.ceil(filteredSkills.length / SKILLS_PER_PAGE)),
+    [filteredSkills.length]
+  );
+
+  const paginatedSkills = useMemo(() => {
+    const start = (skillsPage - 1) * SKILLS_PER_PAGE;
+    return filteredSkills.slice(start, start + SKILLS_PER_PAGE);
+  }, [filteredSkills, skillsPage]);
 
   useEffect(() => {
-    setVisibleProjectsCount(5);
+    setProjectsPage(1);
   }, [projectSearchTerm, projectCategory, projectStack]);
+
+  useEffect(() => {
+    setSkillsPage(1);
+  }, [searchTerm]);
 
   const getImageUrl = (url: string | null): string => {
     const cleanedUrl = cleanUrl(url);
@@ -391,7 +415,7 @@ export default function Home() {
 
               <CardContent>
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-                  {filteredSkills.map((skill, index) => (
+                  {paginatedSkills.map((skill, index) => (
                     <Button
                       key={skill.name}
                       variant="outline"
@@ -421,10 +445,37 @@ export default function Home() {
                 )}
               </CardContent>
 
-              <CardFooter className="bg-muted/50 border-t py-4">
+              <CardFooter className="bg-muted/50 flex flex-col gap-3 border-t py-4">
                 <p className="text-muted-foreground w-full text-center text-sm">
                   {t("skills.footer")}
                 </p>
+                {totalSkillsPages > 1 && (
+                  <div className="flex items-center gap-3">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setSkillsPage((p) => Math.max(1, p - 1))}
+                      disabled={skillsPage === 1}
+                      aria-label={t("pagination.previous")}
+                    >
+                      <ChevronLeft className="h-4 w-4" />
+                      {t("pagination.previous")}
+                    </Button>
+                    <span className="text-muted-foreground text-sm">
+                      {t("pagination.page", { current: skillsPage, total: totalSkillsPages })}
+                    </span>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setSkillsPage((p) => Math.min(totalSkillsPages, p + 1))}
+                      disabled={skillsPage === totalSkillsPages}
+                      aria-label={t("pagination.next")}
+                    >
+                      {t("pagination.next")}
+                      <ChevronRight className="h-4 w-4" />
+                    </Button>
+                  </div>
+                )}
               </CardFooter>
             </Card>
           </section>
@@ -573,10 +624,32 @@ export default function Home() {
                   })}
                 </p>
 
-                {visibleProjectsCount < filteredProjects.length && (
-                  <Button onClick={() => setVisibleProjectsCount((previous) => previous + 5)}>
-                    {t("projects.footer.loadMore")}
-                  </Button>
+                {totalProjectsPages > 1 && (
+                  <div className="flex items-center gap-3">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setProjectsPage((p) => Math.max(1, p - 1))}
+                      disabled={projectsPage === 1}
+                      aria-label={t("pagination.previous")}
+                    >
+                      <ChevronLeft className="h-4 w-4" />
+                      {t("pagination.previous")}
+                    </Button>
+                    <span className="text-muted-foreground text-sm">
+                      {t("pagination.page", { current: projectsPage, total: totalProjectsPages })}
+                    </span>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setProjectsPage((p) => Math.min(totalProjectsPages, p + 1))}
+                      disabled={projectsPage === totalProjectsPages}
+                      aria-label={t("pagination.next")}
+                    >
+                      {t("pagination.next")}
+                      <ChevronRight className="h-4 w-4" />
+                    </Button>
+                  </div>
                 )}
               </CardFooter>
             </Card>

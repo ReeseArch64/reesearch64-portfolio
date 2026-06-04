@@ -68,5 +68,10 @@
     "noResults": "No technologies found for \"{{searchTerm}}\"",
     "searchPlaceholder": "Search technology (name or variant)...",
     "title": "Skills"
+  },
+  "pagination": {
+    "previous": "Previous",
+    "next": "Next",
+    "page": "Page {{current}} of {{total}}"
   }
 }
