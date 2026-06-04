@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/ReeseArch64/reesearch64-portfolio/compare/v1.1.0...v1.2.0) (2026-06-04)
+
+
+### Features
+
+* **pagination:** adiciona paginação em Habilidades e Projetos ([e1b5362](https://github.com/ReeseArch64/reesearch64-portfolio/commit/e1b5362c6140cdc3c234fb6cfea297952c0d3eee))
+
 # [1.1.0](https://github.com/ReeseArch64/reesearch64-portfolio/compare/v1.0.1...v1.1.0) (2026-05-30)
 
 
